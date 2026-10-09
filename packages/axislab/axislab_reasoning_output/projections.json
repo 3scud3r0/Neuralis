@@ -1,0 +1,130 @@
+{
+  "schema": "axislab.reasoning_observables.v1",
+  "disclaimer": "Token projections are probabilistic proxies, not hidden chain-of-thought transcripts.",
+  "metadata": {
+    "model": "toy-local",
+    "kind": "observables-not-cot"
+  },
+  "stages": [
+    {
+      "label": "recurrence_0",
+      "token_ids": [
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "probabilities": [
+        [
+          0.8575994968414307,
+          0.1417602151632309,
+          0.0006402714643627405
+        ]
+      ],
+      "entropy": [
+        0.4133964478969574
+      ],
+      "target_rank": [
+        2
+      ],
+      "source": "logit_lens:intermediate_prediction_not_reasoning_transcript"
+    },
+    {
+      "label": "recurrence_1",
+      "token_ids": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "probabilities": [
+        [
+          0.8670994639396667,
+          0.13099424540996552,
+          0.0019062792416661978
+        ]
+      ],
+      "entropy": [
+        0.40184715390205383
+      ],
+      "target_rank": [
+        1
+      ],
+      "source": "logit_lens:intermediate_prediction_not_reasoning_transcript"
+    },
+    {
+      "label": "recurrence_2",
+      "token_ids": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "probabilities": [
+        [
+          0.9367672204971313,
+          0.05884665250778198,
+          0.004386076238006353
+        ]
+      ],
+      "entropy": [
+        0.25170549750328064
+      ],
+      "target_rank": [
+        1
+      ],
+      "source": "logit_lens:intermediate_prediction_not_reasoning_transcript"
+    },
+    {
+      "label": "recurrence_3",
+      "token_ids": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "probabilities": [
+        [
+          0.9161262512207031,
+          0.07089706510305405,
+          0.012976677156984806
+        ]
+      ],
+      "entropy": [
+        0.3242630958557129
+      ],
+      "target_rank": [
+        1
+      ],
+      "source": "logit_lens:intermediate_prediction_not_reasoning_transcript"
+    },
+    {
+      "label": "recurrence_4",
+      "token_ids": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "probabilities": [
+        [
+          0.8540988564491272,
+          0.11223084479570389,
+          0.03367031365633011
+        ]
+      ],
+      "entropy": [
+        0.49435022473335266
+      ],
+      "target_rank": [
+        1
+      ],
+      "source": "logit_lens:intermediate_prediction_not_reasoning_transcript"
+    }
+  ]
+}

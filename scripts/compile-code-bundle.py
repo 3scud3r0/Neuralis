@@ -20,18 +20,20 @@ TEXT_EXTENSIONS = {
     ".js", ".json", ".jsx", ".lock", ".mjs", ".md", ".py", ".rs", ".scss", ".sh",
     ".sql", ".toml", ".ts", ".tsx", ".txt", ".xml", ".yaml", ".yml",
 }
-TEXT_FILENAMES = {".gitignore", ".env.example", "Dockerfile", "Makefile", "README"}
+TEXT_FILENAMES = {".gitignore", ".env.example", "Dockerfile", "Makefile", "README", "LICENSE", "NOTICE"}
 EXCLUDED_DIRECTORIES = {
     ".git", ".venv", ".venvs", ".cache", "node_modules", "dist", "target", "__pycache__",
     ".pytest_cache", ".ruff_cache", ".mypy_cache", "coverage", "htmlcov", "test-results",
     "playwright-report", "runs", "checkpoints", "recordings", "artifacts", "generated",
 }
-EXCLUDED_PREFIXES = ("screenshots/", "demos/super-mario/evidence/")
+EXCLUDED_PREFIXES = ("demos/super-mario/evidence/",)
 MAX_FILE_BYTES = 8 * 1024 * 1024
 
 
 def is_source_file(path: Path, output: Path) -> bool:
-    if path == output or not path.is_file() or path.stat().st_size > MAX_FILE_BYTES:
+    if path == output or path.is_symlink() or not path.is_file() or path.stat().st_size > MAX_FILE_BYTES:
+        return False
+    if path.name.startswith(".env") and path.name != ".env.example":
         return False
     relative = path.relative_to(ROOT).as_posix()
     if any(part in EXCLUDED_DIRECTORIES for part in path.relative_to(ROOT).parts):
@@ -69,8 +71,9 @@ def compile_bundle(output: Path) -> tuple[int, int, str]:
         if text is None:
             skipped += 1
             continue
-        if not text.endswith("\n"):
-            text += "\n"
+        # Keep the bundle diff-friendly while leaving source files byte-for-byte
+        # untouched in the repository (some imported examples contain padding).
+        text = "\n".join(line.rstrip() for line in text.splitlines()) + "\n"
         files.append((path.relative_to(ROOT).as_posix(), text))
 
     generated = datetime.now(timezone.utc).replace(microsecond=0).isoformat()

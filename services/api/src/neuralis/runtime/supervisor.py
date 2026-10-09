@@ -26,6 +26,16 @@ def loss_for(logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
     return nn.functional.cross_entropy(logits.reshape(-1, logits.shape[-1]), targets.reshape(-1))
 
 
+def build_training_model(config: RunConfig) -> nn.Module:
+    model = build_model(config.model_id, config.seed, config.architecture)
+    if config.adapter.enabled:
+        from neuralis.runtime.training.qlora_engine import LoRAConfig, inject_lora
+        inject_lora(model, LoRAConfig(rank=config.adapter.rank, alpha=config.adapter.alpha,
+                                     target_modules=tuple(config.adapter.target_modules)),
+                    quantize_base=config.adapter.quantize_base, seed=config.seed + 2000)
+    return model.to(resolve_device(config.device))
+
+
 def evaluate(model, split):
     was_training = model.training
     model.eval()
@@ -91,7 +101,7 @@ class Supervisor:
                 if not removable:
                     raise StateConflict("Local runtime has reached its loaded-model limit")
                 del self.runs[removable[0]]
-            model = build_model(config.model_id, config.seed, config.architecture).to(resolve_device(config.device))
+            model = build_training_model(config)
             dataset = self.dataset_for(config)
             optimizer = optimizer_for(model, config)
             generator = torch.Generator().manual_seed(config.seed + 1000)
@@ -109,7 +119,7 @@ class Supervisor:
                 if not checkpoints:
                     raise StateConflict("Model is no longer loaded and no checkpoint is available")
                 config = RunConfig.model_validate(row["config"])
-                model = build_model(config.model_id, config.seed, config.architecture).to(resolve_device(config.device))
+                model = build_training_model(config)
                 optimizer = optimizer_for(model, config)
                 generator = torch.Generator().manual_seed(config.seed + 1000)
                 manifest = self.checkpoints.load(checkpoints[0]["id"], model, optimizer, generator)

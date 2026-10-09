@@ -4,6 +4,8 @@ Neuralis Studio is an open neural research workbench for the browser and desktop
 
 The browser build runs without a server and includes inspectable models, training controls, weights, activations, gradients, attention views, interventions, representation analysis, CSV preprocessing, checkpoints, replay and a library of runnable demonstrations. The optional API runs registered PyTorch MLP, CNN and causal Transformer examples on CPU and exposes bounded telemetry, checkpoints, inference, attribution and controlled interventions. The desktop shell is a Tauri host for the same UI and a local or remote runtime.
 
+The research extension adds the bundled **AxisLab 0.3.0** library, NF4 compression and LoRA training, sparse dictionaries, token X-ray, a WebGPU observatory with CPU fallback, actual RL recordings and WebRTC, verified synthetic data, encrypted local retrieval, declarative residual graph compilation and GGUF/Ollama export adapters. See [the module guide](docs/research-extension-guide.md) for runnable examples and exact capability limits.
+
 The project does not claim access to the private weights or internal tools of Anthropic, OpenAI or xAI. A 3D graph is a measured representation of captured model data, not a visualization of private model thoughts. Large-laboratory adapters report their actual availability; PostgreSQL, S3, OIDC, Slurm, Kubernetes, TransformerLens and Circuit Tracer are optional capabilities and are not silently presented as configured in this checkout.
 
 ## Try the browser workbench
@@ -19,6 +21,10 @@ The repository includes a Pages workflow at `.github/workflows/pages.yml`. After
 
 `https://3scud3r0.github.io/Neuralis/`
 
+[Open research extensions](https://3scud3r0.github.io/Neuralis/#/research),
+[view numbered screenshots](https://3scud3r0.github.io/Neuralis/screenshots/) or
+[download the complete source TXT](https://3scud3r0.github.io/Neuralis/neuralis-all-code.txt).
+
 The workflow runs TypeScript checks, browser tests and the production build before publishing. A static Pages site cannot run the Python API or train Mario; it provides the CPU browser experiments, source demos, viewer and measured evidence. Use a local API or desktop runtime for larger models.
 
 ## Run the Python runtime
@@ -26,7 +32,7 @@ The workflow runs TypeScript checks, browser tests and the production build befo
 The validated runtime targets Python 3.12–3.13 and CPU by default. `uv` keeps dependencies and the CPU PyTorch wheel pinned.
 
 ```bash
-uv sync --project services/api --extra dev
+uv sync --project services/api --frozen --extra dev --extra research --extra streaming --extra lan
 uv run --project services/api python -m neuralis
 ```
 
@@ -54,12 +60,14 @@ python3.11 -m venv .venv
 python -m pip install -r requirements.txt
 python doctor.py
 python train.py --config configs/smoke.json
-python evaluate.py --checkpoint runs/latest/checkpoint.pt --episodes 3
+python evaluate.py runs/smoke/latest.pt --episodes 3
 ```
 
 The emulator smoke test and a 2,048-transition PPO run completed in this environment. The held-out short evaluation completed **0/3 flags**; the maximum observed x-position was 314 and mean native return was 250. The Double-DQN smoke test completed 512 transitions and 61 gradient updates; it also did not solve a level. These are measured research baselines, not a claim of perfect Mario play. Longer training requires a user-owned machine, legal game assets and substantially more compute.
 
 The numbered Mario evidence and report are in `demos/super-mario/evidence/`. The browser viewer is `demos/super-mario/index.html`. Large checkpoints and replay buffers are intentionally not included in the static Pages artifact.
+
+Use `python arena.py runs/smoke/latest.pt --url http://127.0.0.1:8000 --max-steps 100` to record actual emulator observations in the local API, then open **Research workbench → RL Arena**. The [recorder guide](demos/super-mario/ARENA.md) explains PPO/DDQN checkpoints, frame synchronization and replay limits.
 
 ## Desktop and laboratory profiles
 
@@ -74,6 +82,7 @@ apps/web/                 React, TypeScript, Three.js and browser training engin
 apps/desktop/             Tauri host, runtime lifecycle and secure file integration
 services/api/             FastAPI, PyTorch models, capture, interventions and persistence
 services/worker/          Worker leases, bounded execution and distributed diagnostics
+packages/axislab/          User-supplied AxisLab 0.3.0, original files and provenance
 demos/                    Browser examples and isolated Super Mario RL project
 deploy/                   Local/container laboratory profiles
 docs/                     Desktop, laboratory and source-count documentation
@@ -85,3 +94,5 @@ Generated dependencies, local runs, checkpoints, recordings, `node_modules`, vir
 ## Scope and evidence
 
 The current checkout is CPU-first and bounded. The browser and API tests compare gradients, attention masks, checkpoints, interventions and training metrics against real numerical references. The Pages workflow is configured but publication is owned by GitHub repository settings and the Actions run. The final capture manifest distinguishes actual screenshots from design references; generated concept images in the proposal are not presented as product evidence.
+
+`neuralis-all-code.txt` contains the complete textual source, tests, scripts, configuration and documentation with per-file hashes. Regenerate it with `python3 scripts/compile-code-bundle.py`. Images, model weights, installed dependencies and generated builds are separate artifacts. The measured production count is recorded in [docs/code-count.json](docs/code-count.json).

@@ -184,6 +184,7 @@ export function ArchitectureEditor({
               onClick={() => {
                 setEdited(null);
                 setSelected(null);
+                onChange?.(initialGraph);
               }}
             >
               Restore captured architecture

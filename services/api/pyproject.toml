@@ -11,11 +11,15 @@ dependencies = [
   "torch==2.8.0",
   "safetensors==0.6.2",
   "psutil==7.0.0",
+  "packaging==25.0",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest==8.4.1", "httpx==0.28.1", "ruff==0.12.9"]
 lab = ["PyJWT[crypto]==2.10.1", "sqlalchemy==2.0.43", "psycopg[binary]==3.2.9", "boto3==1.40.11"]
+research = ["axislab-poc==0.3.0", "cryptography==46.0.3", "duckdb==1.4.1"]
+streaming = ["aiortc==1.14.0"]
+lan = ["zeroconf==0.148.0"]
 
 [build-system]
 requires = ["hatchling==1.27.0"]
@@ -29,6 +33,7 @@ testpaths = ["tests"]
 
 [tool.uv.sources]
 torch = [{ index = "pytorch-cpu" }]
+axislab-poc = { path = "../../packages/axislab", editable = true }
 
 [[tool.uv.index]]
 name = "pytorch-cpu"

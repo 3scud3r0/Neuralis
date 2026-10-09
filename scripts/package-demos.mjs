@@ -28,5 +28,6 @@ async function copyTree(source, target) {
 await mkdir(destination, { recursive: true });
 await copyTree(join(root, 'demos'), join(destination, 'demos'));
 await copyTree(join(root, 'screenshots'), join(destination, 'screenshots'));
+await cp(join(root, 'neuralis-all-code.txt'), join(destination, 'neuralis-all-code.txt'));
 await writeFile(join(destination, '.nojekyll'), '');
-console.log('Packaged runnable demo sources, measured Mario report and screenshot evidence into the static build.');
+console.log('Packaged runnable demos, the complete source TXT and screenshot evidence into the static build.');

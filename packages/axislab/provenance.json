@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "source_bundle": "AxisLab_0.3.0_CODIGO_COMPLETO.txt",
+  "source_bundle_sha256": "c7b00aa7a0891a3db0ce1a8b5bc09380e78faa32a751b60cc9ba51a2584d8bef",
+  "archive_root": "axislab-research-0.3.0",
+  "text_file_count": 28,
+  "license": "MIT (original LICENSE preserved byte for byte)",
+  "excluded_binary_data": "Original bundle explicitly excludes .npz files; none were supplied.",
+  "readme_mapping": "README.md is preserved as README.original.md; English README.md is maintained separately.",
+  "files": [
+    {
+      "original_path": "axislab-research-0.3.0/LICENSE",
+      "path": "LICENSE",
+      "byte_length": 1077,
+      "sha256": "73252246801f9ef2781b4fe71112e9a76f76689f6d1f96a43289b62cd6a6f04a"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/README.md",
+      "path": "README.original.md",
+      "byte_length": 17045,
+      "sha256": "1c8e2748beeb79fe24e844a4d250453fb7b96bca585f10911307884901ca7a58"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/axislab_reasoning_output/circuit.html",
+      "path": "axislab_reasoning_output/circuit.html",
+      "byte_length": 2232,
+      "sha256": "73c6b6dd302044a2a3c7fc68c2aba15ba015a5acc5bfa3b72f9a99c499113877"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/axislab_reasoning_output/local_states.json",
+      "path": "axislab_reasoning_output/local_states.json",
+      "byte_length": 1290,
+      "sha256": "06e21baf1d9baf9fa7f393944c3749e086adca59961b544aa23a14cb02673b54"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/axislab_reasoning_output/projections.json",
+      "path": "axislab_reasoning_output/projections.json",
+      "byte_length": 2522,
+      "sha256": "1ac586acb93574cf465cc83852c61625b51a1e32c48cfd2c8d032bc3e2f7fd77"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/axislab_reasoning_output/report.html",
+      "path": "axislab_reasoning_output/report.html",
+      "byte_length": 1805,
+      "sha256": "cdc2df7759d410e2596a67e643ac871b27aca91ad5a96f7ffa9f5b5de1a2d328"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/demo.py",
+      "path": "demo.py",
+      "byte_length": 1525,
+      "sha256": "32ba4fda993afe3a4d74b7ad7fc23f27e60a63474a13dd460782087ee9c6ab68"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/demo_advanced.py",
+      "path": "demo_advanced.py",
+      "byte_length": 2901,
+      "sha256": "dda3f6d26b9f576863d96550957c56b6fc912134348831400c53c77c65449898"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/demo_reasoning.py",
+      "path": "demo_reasoning.py",
+      "byte_length": 2311,
+      "sha256": "2d7b51eba7d17a314dc1ebfe4071a8ea2b7fb7109e55b5278b0bf83ecc7cd58b"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/examples/hf_local_lens.py",
+      "path": "examples/hf_local_lens.py",
+      "byte_length": 1622,
+      "sha256": "e2390a131caedee056d48735df90c8e8e66d3e55f2e69a79875175cdf1e7ffcd"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/pyproject.toml",
+      "path": "pyproject.toml",
+      "byte_length": 660,
+      "sha256": "2e280b4089ff1fdbf6f61ada4f69332c1e077d46b5f99a29d1f764add5bc5de1"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/__init__.py",
+      "path": "src/axislab_poc/__init__.py",
+      "byte_length": 2921,
+      "sha256": "3dfb8b460cac3abfc683c43cb696f2b6393ddc4f3d3dbff19145034a9efbdecc"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/adapters.py",
+      "path": "src/axislab_poc/adapters.py",
+      "byte_length": 5555,
+      "sha256": "3fbaa18736a465d5de66394ca3a19da8568ca4324f12e31533834a28b80e1246"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/causal_reasoning.py",
+      "path": "src/axislab_poc/causal_reasoning.py",
+      "byte_length": 4294,
+      "sha256": "46d60adb4000ca5bedb2fcad67ebd43b84d55dd85d3b4412ea1fede951c0ba20"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/circuits.py",
+      "path": "src/axislab_poc/circuits.py",
+      "byte_length": 5705,
+      "sha256": "80bd1a1cd6db0585dc54d4b53148670befc12f861bf43d170eddf0e836770ca1"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/core.py",
+      "path": "src/axislab_poc/core.py",
+      "byte_length": 5587,
+      "sha256": "6fbf821498b71fc97d1c13ce356871e685bb449b18d6f908338260390656de4e"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/interpretation.py",
+      "path": "src/axislab_poc/interpretation.py",
+      "byte_length": 3686,
+      "sha256": "eed62a39395f69af6e247185104b1b83ccfffa1df220e6195af9a99691a9f03e"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/interventions.py",
+      "path": "src/axislab_poc/interventions.py",
+      "byte_length": 4299,
+      "sha256": "846a7f2588c3d130724f2365995a29c1152dcc5e332b3349bf74cd68c7f58e12"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/lenses.py",
+      "path": "src/axislab_poc/lenses.py",
+      "byte_length": 9733,
+      "sha256": "0c0de0a2a04661793e4c45797483f297317ad56ed6b19f7e2da966402ccb806c"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/memory.py",
+      "path": "src/axislab_poc/memory.py",
+      "byte_length": 4902,
+      "sha256": "96dd27d4444de25ad4799fdfec828c1f9176872ac2a569037070c583d7d11aa5"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/reporting.py",
+      "path": "src/axislab_poc/reporting.py",
+      "byte_length": 5114,
+      "sha256": "8c9578a50f7caec9b3c0d9e2add38bfa50527254c6d4cc8d9cd055e444c9a735"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/representations.py",
+      "path": "src/axislab_poc/representations.py",
+      "byte_length": 7509,
+      "sha256": "3d0d835745ffd9f4f4ce710aca2f9e9e23f1f2f5f4762aabc423779e7f817957"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/sparse.py",
+      "path": "src/axislab_poc/sparse.py",
+      "byte_length": 4642,
+      "sha256": "3398ddf404f0bb17e4cf6aee23abd1a127a26ee812ae8f21092703d86e3ff73c"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/streaming.py",
+      "path": "src/axislab_poc/streaming.py",
+      "byte_length": 2597,
+      "sha256": "d903749c5a6fd45db5ba32b8f348f7940cd7bea45790355af034da19057b9c18"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/src/axislab_poc/traces.py",
+      "path": "src/axislab_poc/traces.py",
+      "byte_length": 6614,
+      "sha256": "c125e29a58b1e079996e61d74a9ea77ed2d87ac7ecf70bb3601c8925bc2193c5"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/tests/test_advanced.py",
+      "path": "tests/test_advanced.py",
+      "byte_length": 9135,
+      "sha256": "cb6b90a9e5ef354ee7b0faee72a1ef3550a3c8d69f7693c4e4f11cf57cad0c95"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/tests/test_core.py",
+      "path": "tests/test_core.py",
+      "byte_length": 2628,
+      "sha256": "4769a1679f99da80f94193fd6653ae9d8a0b31111c247f789947d5f5379dd27e"
+    },
+    {
+      "original_path": "axislab-research-0.3.0/tests/test_reasoning.py",
+      "path": "tests/test_reasoning.py",
+      "byte_length": 8940,
+      "sha256": "05eed875ca60d441325862ad89f7689101b6459653c77b7141f2eaf1f96e2a5a"
+    }
+  ],
+  "source_modifications": []
+}

@@ -5,25 +5,21 @@ import torch
 
 
 def device_capabilities():
-    cuda = torch.cuda.is_available()
-    mps = bool(hasattr(torch.backends, "mps") and torch.backends.mps.is_available())
-    result = {"cpu": {"available": True, "validated_in_this_build": True},
-              "cuda": {"available": cuda, "validated_in_this_build": False},
-              "mps": {"available": mps, "validated_in_this_build": False}}
-    if cuda:
-        result["cuda"]["devices"] = [{"index": index, "name": torch.cuda.get_device_name(index),
-                                      "total_memory_bytes": torch.cuda.get_device_properties(index).total_memory}
-                                     for index in range(torch.cuda.device_count())]
-    return result
+    from neuralis.runtime.acceleration.backends import backend_capabilities
+    return {name: {**details, "validated_in_this_build": name == "cpu"}
+            for name, details in backend_capabilities()["backends"].items()}
 
 
 def resolve_device(requested: str) -> torch.device:
+    if requested == "rocm":
+        from neuralis.runtime.acceleration.backends import resolve_backend
+        return resolve_backend("rocm").device
     available = device_capabilities()
     if requested == "auto":
-        requested = "cuda" if available["cuda"]["available"] else "mps" if available["mps"]["available"] else "cpu"
+        requested = next(name for name in ("cuda", "rocm", "mps", "cpu") if available[name]["available"])
     if requested not in available or not available[requested]["available"]:
         raise ValueError(f"Requested device {requested} is unavailable; use CPU or install a compatible accelerator runtime")
-    return torch.device(requested)
+    return torch.device("cuda" if requested == "rocm" else requested)
 
 
 def module_device(model):
@@ -33,13 +29,16 @@ def module_device(model):
 def optimizer_for(model, config):
     common = {"lr": config.learning_rate, "weight_decay": config.weight_decay}
     options = config.optimizer
+    parameters = [parameter for parameter in model.parameters() if parameter.requires_grad]
+    if not parameters:
+        raise ValueError("The model has no trainable parameters")
     if options.name == "adamw":
-        return torch.optim.AdamW(model.parameters(), betas=(options.beta1, options.beta2), eps=options.epsilon, **common)
+        return torch.optim.AdamW(parameters, betas=(options.beta1, options.beta2), eps=options.epsilon, **common)
     if options.name == "adam":
-        return torch.optim.Adam(model.parameters(), betas=(options.beta1, options.beta2), eps=options.epsilon, **common)
+        return torch.optim.Adam(parameters, betas=(options.beta1, options.beta2), eps=options.epsilon, **common)
     if options.name == "sgd":
-        return torch.optim.SGD(model.parameters(), momentum=options.momentum, nesterov=options.nesterov, **common)
-    return torch.optim.RMSprop(model.parameters(), momentum=options.momentum, eps=options.epsilon, **common)
+        return torch.optim.SGD(parameters, momentum=options.momentum, nesterov=options.nesterov, **common)
+    return torch.optim.RMSprop(parameters, momentum=options.momentum, eps=options.epsilon, **common)
 
 
 def scheduled_learning_rate(config, completed_steps: int):

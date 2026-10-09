@@ -1,24 +1,24 @@
 {
   "metric": "physical nonblank non-comment source lines; tests/tooling/config separated",
   "production_target": 30000,
-  "production_target_met": false,
+  "production_target_met": true,
   "totals": {
-    "production": 23413,
+    "production": 30205,
     "configuration_code": 54,
-    "tests": 2034,
-    "tooling": 198
+    "tests": 4102,
+    "tooling": 621
   },
   "languages": {
-    ".ts": 8875,
-    ".py": 6917,
+    ".ts": 10088,
+    ".py": 13718,
     ".rs": 1950,
-    ".tsx": 5394,
-    ".css": 2145,
+    ".tsx": 6357,
+    ".css": 2281,
     ".sh": 40,
     ".js": 283,
-    ".mjs": 95
+    ".mjs": 265
   },
-  "file_count": 198,
+  "file_count": 317,
   "files": [
     {
       "path": "apps/desktop/bridge.ts",
@@ -119,8 +119,8 @@
     {
       "path": "apps/web/src/App.tsx",
       "category": "production",
-      "physical": 49,
-      "code": 48,
+      "physical": 57,
+      "code": 56,
       "blank": 1,
       "comment": 0
     },
@@ -143,8 +143,8 @@
     {
       "path": "apps/web/src/app/navigation.ts",
       "category": "production",
-      "physical": 20,
-      "code": 20,
+      "physical": 24,
+      "code": 24,
       "blank": 0,
       "comment": 0
     },
@@ -349,6 +349,46 @@
       "comment": 6
     },
     {
+      "path": "apps/web/src/features/AdvancedResearch/advanced.css",
+      "category": "production",
+      "physical": 17,
+      "code": 17,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/AdvancedResearch/captures.ts",
+      "category": "production",
+      "physical": 31,
+      "code": 30,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/AdvancedResearch/index.tsx",
+      "category": "production",
+      "physical": 52,
+      "code": 51,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/AdvancedResearch/inference.ts",
+      "category": "production",
+      "physical": 51,
+      "code": 44,
+      "blank": 5,
+      "comment": 2
+    },
+    {
+      "path": "apps/web/src/features/AdvancedResearch/numerical.test.ts",
+      "category": "tests",
+      "physical": 109,
+      "code": 105,
+      "blank": 4,
+      "comment": 0
+    },
+    {
       "path": "apps/web/src/features/Artifacts.tsx",
       "category": "production",
       "physical": 51,
@@ -389,6 +429,46 @@
       "comment": 0
     },
     {
+      "path": "apps/web/src/features/GraphEditor/BackendGraphSurgery.tsx",
+      "category": "production",
+      "physical": 152,
+      "code": 143,
+      "blank": 7,
+      "comment": 2
+    },
+    {
+      "path": "apps/web/src/features/GraphEditor/graphModel.ts",
+      "category": "production",
+      "physical": 31,
+      "code": 27,
+      "blank": 3,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/features/GraphEditor/index.tsx",
+      "category": "production",
+      "physical": 35,
+      "code": 34,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/GraphEditor/nativeGraph.test.ts",
+      "category": "tests",
+      "physical": 35,
+      "code": 33,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/InferenceStream.tsx",
+      "category": "production",
+      "physical": 81,
+      "code": 79,
+      "blank": 2,
+      "comment": 0
+    },
+    {
       "path": "apps/web/src/features/Inspectors.tsx",
       "category": "production",
       "physical": 54,
@@ -421,6 +501,46 @@
       "comment": 0
     },
     {
+      "path": "apps/web/src/features/RLArena/LiveStreamView.tsx",
+      "category": "production",
+      "physical": 86,
+      "code": 85,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/RLArena/TimeTravelDebugger.tsx",
+      "category": "production",
+      "physical": 74,
+      "code": 73,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/RLArena/arena.css",
+      "category": "production",
+      "physical": 1,
+      "code": 1,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/RLArena/client.test.ts",
+      "category": "tests",
+      "physical": 55,
+      "code": 54,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/RLArena/client.ts",
+      "category": "production",
+      "physical": 56,
+      "code": 56,
+      "blank": 0,
+      "comment": 0
+    },
+    {
       "path": "apps/web/src/features/Readiness.tsx",
       "category": "production",
       "physical": 79,
@@ -435,6 +555,166 @@
       "code": 31,
       "blank": 1,
       "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/ArenaPanel.tsx",
+      "category": "production",
+      "physical": 49,
+      "code": 47,
+      "blank": 1,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/AxisPanel.tsx",
+      "category": "production",
+      "physical": 47,
+      "code": 46,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/ExportPanel.tsx",
+      "category": "production",
+      "physical": 31,
+      "code": 30,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/FoundryPanel.tsx",
+      "category": "production",
+      "physical": 44,
+      "code": 43,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/RagPanel.tsx",
+      "category": "production",
+      "physical": 74,
+      "code": 73,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/ResearchWorkbench.tsx",
+      "category": "production",
+      "physical": 61,
+      "code": 60,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/TrainingPanel.tsx",
+      "category": "production",
+      "physical": 38,
+      "code": 37,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/arenaEngine.ts",
+      "category": "production",
+      "physical": 48,
+      "code": 47,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/axisEngine.ts",
+      "category": "production",
+      "physical": 84,
+      "code": 84,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/efficiencyEngine.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 44,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/exportEngine.ts",
+      "category": "production",
+      "physical": 16,
+      "code": 16,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/extensionClient.test.ts",
+      "category": "tests",
+      "physical": 66,
+      "code": 66,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/extensionClient.ts",
+      "category": "production",
+      "physical": 74,
+      "code": 74,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/foundryEngine.ts",
+      "category": "production",
+      "physical": 81,
+      "code": 79,
+      "blank": 1,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/index.ts",
+      "category": "production",
+      "physical": 2,
+      "code": 2,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/ragEngine.ts",
+      "category": "production",
+      "physical": 77,
+      "code": 76,
+      "blank": 0,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/researchEngines.test.ts",
+      "category": "tests",
+      "physical": 152,
+      "code": 151,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/researchWorkbench.css",
+      "category": "production",
+      "physical": 118,
+      "code": 118,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/shared.tsx",
+      "category": "production",
+      "physical": 25,
+      "code": 25,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ResearchWorkbench/workbenchInteractions.test.tsx",
+      "category": "tests",
+      "physical": 63,
+      "code": 61,
+      "blank": 1,
+      "comment": 1
     },
     {
       "path": "apps/web/src/features/Training.tsx",
@@ -575,8 +855,8 @@
     {
       "path": "apps/web/src/visualization/ArchitectureEditor.tsx",
       "category": "production",
-      "physical": 468,
-      "code": 464,
+      "physical": 469,
+      "code": 465,
       "blank": 3,
       "comment": 1
     },
@@ -701,6 +981,22 @@
       "comment": 2
     },
     {
+      "path": "apps/web/src/visualization/components/LatentSpaceExplorer.tsx",
+      "category": "production",
+      "physical": 50,
+      "code": 49,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/engine/webgpu_renderer.ts",
+      "category": "production",
+      "physical": 3,
+      "code": 3,
+      "blank": 0,
+      "comment": 0
+    },
+    {
       "path": "apps/web/src/visualization/exports.ts",
       "category": "production",
       "physical": 80,
@@ -755,6 +1051,46 @@
       "code": 1114,
       "blank": 0,
       "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/webgpu/AttentionSplines.ts",
+      "category": "production",
+      "physical": 18,
+      "code": 17,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/webgpu/ComputeShaderRouter.ts",
+      "category": "production",
+      "physical": 33,
+      "code": 31,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/webgpu/LatentSpaceGalaxy.tsx",
+      "category": "production",
+      "physical": 19,
+      "code": 18,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/webgpu/VolumetricFlowRenderer.ts",
+      "category": "production",
+      "physical": 132,
+      "code": 126,
+      "blank": 5,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/visualization/webgpu/types.ts",
+      "category": "production",
+      "physical": 45,
+      "code": 44,
+      "blank": 0,
+      "comment": 1
     },
     {
       "path": "apps/web/vite.config.ts",
@@ -923,6 +1259,14 @@
       "code": 39,
       "blank": 3,
       "comment": 2
+    },
+    {
+      "path": "demos/super-mario/arena.py",
+      "category": "production",
+      "physical": 248,
+      "code": 195,
+      "blank": 22,
+      "comment": 31
     },
     {
       "path": "demos/super-mario/benchmark.py",
@@ -1221,6 +1565,182 @@
       "comment": 11
     },
     {
+      "path": "packages/axislab/demo.py",
+      "category": "production",
+      "physical": 44,
+      "code": 32,
+      "blank": 10,
+      "comment": 2
+    },
+    {
+      "path": "packages/axislab/demo_advanced.py",
+      "category": "production",
+      "physical": 65,
+      "code": 47,
+      "blank": 10,
+      "comment": 8
+    },
+    {
+      "path": "packages/axislab/demo_reasoning.py",
+      "category": "production",
+      "physical": 51,
+      "code": 44,
+      "blank": 6,
+      "comment": 1
+    },
+    {
+      "path": "packages/axislab/examples/hf_local_lens.py",
+      "category": "production",
+      "physical": 35,
+      "code": 23,
+      "blank": 5,
+      "comment": 7
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/__init__.py",
+      "category": "production",
+      "physical": 41,
+      "code": 23,
+      "blank": 3,
+      "comment": 15
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/adapters.py",
+      "category": "production",
+      "physical": 128,
+      "code": 77,
+      "blank": 22,
+      "comment": 29
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/causal_reasoning.py",
+      "category": "production",
+      "physical": 94,
+      "code": 65,
+      "blank": 12,
+      "comment": 17
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/circuits.py",
+      "category": "production",
+      "physical": 112,
+      "code": 88,
+      "blank": 11,
+      "comment": 13
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/core.py",
+      "category": "production",
+      "physical": 148,
+      "code": 109,
+      "blank": 27,
+      "comment": 12
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/interpretation.py",
+      "category": "production",
+      "physical": 81,
+      "code": 58,
+      "blank": 10,
+      "comment": 13
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/interventions.py",
+      "category": "production",
+      "physical": 100,
+      "code": 79,
+      "blank": 16,
+      "comment": 5
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/lenses.py",
+      "category": "production",
+      "physical": 194,
+      "code": 140,
+      "blank": 24,
+      "comment": 30
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/memory.py",
+      "category": "production",
+      "physical": 112,
+      "code": 77,
+      "blank": 18,
+      "comment": 17
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/reporting.py",
+      "category": "production",
+      "physical": 98,
+      "code": 76,
+      "blank": 9,
+      "comment": 13
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/representations.py",
+      "category": "production",
+      "physical": 167,
+      "code": 120,
+      "blank": 23,
+      "comment": 24
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/sparse.py",
+      "category": "production",
+      "physical": 113,
+      "code": 83,
+      "blank": 17,
+      "comment": 13
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/streaming.py",
+      "category": "production",
+      "physical": 70,
+      "code": 57,
+      "blank": 8,
+      "comment": 5
+    },
+    {
+      "path": "packages/axislab/src/axislab_poc/traces.py",
+      "category": "production",
+      "physical": 152,
+      "code": 117,
+      "blank": 15,
+      "comment": 20
+    },
+    {
+      "path": "packages/axislab/tests/test_advanced.py",
+      "category": "tests",
+      "physical": 254,
+      "code": 205,
+      "blank": 48,
+      "comment": 1
+    },
+    {
+      "path": "packages/axislab/tests/test_bundle_import.py",
+      "category": "tests",
+      "physical": 86,
+      "code": 68,
+      "blank": 14,
+      "comment": 4
+    },
+    {
+      "path": "packages/axislab/tests/test_core.py",
+      "category": "tests",
+      "physical": 74,
+      "code": 59,
+      "blank": 15,
+      "comment": 0
+    },
+    {
+      "path": "packages/axislab/tests/test_reasoning.py",
+      "category": "tests",
+      "physical": 205,
+      "code": 169,
+      "blank": 36,
+      "comment": 0
+    },
+    {
       "path": "packages/protocol/backend.ts",
       "category": "production",
       "physical": 224,
@@ -1237,12 +1757,28 @@
       "comment": 0
     },
     {
+      "path": "scripts/capture-research-screenshots.mjs",
+      "category": "tooling",
+      "physical": 118,
+      "code": 116,
+      "blank": 1,
+      "comment": 1
+    },
+    {
       "path": "scripts/capture-screenshots.mjs",
       "category": "tooling",
       "physical": 67,
       "code": 66,
       "blank": 1,
       "comment": 0
+    },
+    {
+      "path": "scripts/compile-code-bundle.py",
+      "category": "tooling",
+      "physical": 126,
+      "code": 87,
+      "blank": 16,
+      "comment": 23
     },
     {
       "path": "scripts/count-code.py",
@@ -1253,12 +1789,36 @@
       "comment": 18
     },
     {
+      "path": "scripts/import-axislab.py",
+      "category": "tooling",
+      "physical": 151,
+      "code": 115,
+      "blank": 15,
+      "comment": 21
+    },
+    {
       "path": "scripts/package-demos.mjs",
       "category": "tooling",
-      "physical": 32,
-      "code": 29,
+      "physical": 33,
+      "code": 30,
       "blank": 3,
       "comment": 0
+    },
+    {
+      "path": "scripts/validate-browser-arena.mjs",
+      "category": "tooling",
+      "physical": 53,
+      "code": 53,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "scripts/validate-research-container.py",
+      "category": "tooling",
+      "physical": 63,
+      "code": 51,
+      "blank": 6,
+      "comment": 6
     },
     {
       "path": "services/api/src/neuralis/__init__.py",
@@ -1325,6 +1885,22 @@
       "comment": 3
     },
     {
+      "path": "services/api/src/neuralis/api/extensions.py",
+      "category": "production",
+      "physical": 551,
+      "code": 435,
+      "blank": 72,
+      "comment": 44
+    },
+    {
+      "path": "services/api/src/neuralis/api/frame_transport.py",
+      "category": "production",
+      "physical": 87,
+      "code": 83,
+      "blank": 3,
+      "comment": 1
+    },
+    {
       "path": "services/api/src/neuralis/api/middleware.py",
       "category": "production",
       "physical": 36,
@@ -1341,12 +1917,52 @@
       "comment": 3
     },
     {
+      "path": "services/api/src/neuralis/cluster/__init__.py",
+      "category": "production",
+      "physical": 1,
+      "code": 0,
+      "blank": 0,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/cluster/distributed/__init__.py",
+      "category": "production",
+      "physical": 3,
+      "code": 2,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/cluster/distributed/lan_pipeline_parallelism.py",
+      "category": "production",
+      "physical": 555,
+      "code": 467,
+      "blank": 65,
+      "comment": 23
+    },
+    {
+      "path": "services/api/src/neuralis/cluster/lan_discovery.py",
+      "category": "production",
+      "physical": 118,
+      "code": 96,
+      "blank": 20,
+      "comment": 2
+    },
+    {
+      "path": "services/api/src/neuralis/cluster/memory_offloading.py",
+      "category": "production",
+      "physical": 147,
+      "code": 110,
+      "blank": 24,
+      "comment": 13
+    },
+    {
       "path": "services/api/src/neuralis/core/schemas.py",
       "category": "production",
-      "physical": 160,
-      "code": 123,
-      "blank": 37,
-      "comment": 0
+      "physical": 180,
+      "code": 139,
+      "blank": 40,
+      "comment": 1
     },
     {
       "path": "services/api/src/neuralis/datasets/imports.py",
@@ -1363,6 +1979,118 @@
       "code": 82,
       "blank": 27,
       "comment": 8
+    },
+    {
+      "path": "services/api/src/neuralis/export/__init__.py",
+      "category": "production",
+      "physical": 5,
+      "code": 2,
+      "blank": 2,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/export/gguf.py",
+      "category": "production",
+      "physical": 209,
+      "code": 178,
+      "blank": 16,
+      "comment": 15
+    },
+    {
+      "path": "services/api/src/neuralis/export/gguf_quantizer.py",
+      "category": "production",
+      "physical": 9,
+      "code": 2,
+      "blank": 3,
+      "comment": 4
+    },
+    {
+      "path": "services/api/src/neuralis/export/ollama_exporter.py",
+      "category": "production",
+      "physical": 5,
+      "code": 2,
+      "blank": 2,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/__init__.py",
+      "category": "production",
+      "physical": 5,
+      "code": 2,
+      "blank": 2,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/_tensors.py",
+      "category": "production",
+      "physical": 72,
+      "code": 55,
+      "blank": 13,
+      "comment": 4
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/activation_cache.py",
+      "category": "production",
+      "physical": 133,
+      "code": 100,
+      "blank": 19,
+      "comment": 14
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/circuit_discovery/__init__.py",
+      "category": "production",
+      "physical": 3,
+      "code": 2,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/circuit_discovery/activation_patching.py",
+      "category": "production",
+      "physical": 109,
+      "code": 83,
+      "blank": 14,
+      "comment": 12
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/interventions/__init__.py",
+      "category": "production",
+      "physical": 3,
+      "code": 2,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/interventions/steering_vectors.py",
+      "category": "production",
+      "physical": 86,
+      "code": 73,
+      "blank": 11,
+      "comment": 2
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/lenses.py",
+      "category": "production",
+      "physical": 206,
+      "code": 149,
+      "blank": 20,
+      "comment": 37
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/sae/__init__.py",
+      "category": "production",
+      "physical": 3,
+      "code": 2,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/interpretability/sae/dictionary_learning.py",
+      "category": "production",
+      "physical": 141,
+      "code": 106,
+      "blank": 14,
+      "comment": 21
     },
     {
       "path": "services/api/src/neuralis/lab/auth.py",
@@ -1383,8 +2111,8 @@
     {
       "path": "services/api/src/neuralis/main.py",
       "category": "production",
-      "physical": 547,
-      "code": 429,
+      "physical": 552,
+      "code": 434,
       "blank": 72,
       "comment": 46
     },
@@ -1397,12 +2125,132 @@
       "comment": 3
     },
     {
+      "path": "services/api/src/neuralis/models/graph_surgery.py",
+      "category": "production",
+      "physical": 193,
+      "code": 158,
+      "blank": 21,
+      "comment": 14
+    },
+    {
       "path": "services/api/src/neuralis/models/registry.py",
       "category": "production",
       "physical": 183,
       "code": 143,
       "blank": 27,
       "comment": 13
+    },
+    {
+      "path": "services/api/src/neuralis/rag/__init__.py",
+      "category": "production",
+      "physical": 7,
+      "code": 4,
+      "blank": 2,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/rag/chunking.py",
+      "category": "production",
+      "physical": 57,
+      "code": 50,
+      "blank": 5,
+      "comment": 2
+    },
+    {
+      "path": "services/api/src/neuralis/rag/embeddings.py",
+      "category": "production",
+      "physical": 65,
+      "code": 46,
+      "blank": 13,
+      "comment": 6
+    },
+    {
+      "path": "services/api/src/neuralis/rag/local.py",
+      "category": "production",
+      "physical": 178,
+      "code": 137,
+      "blank": 18,
+      "comment": 23
+    },
+    {
+      "path": "services/api/src/neuralis/rag/vector_db_engine.py",
+      "category": "production",
+      "physical": 6,
+      "code": 3,
+      "blank": 2,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/rl_arena/__init__.py",
+      "category": "production",
+      "physical": 8,
+      "code": 5,
+      "blank": 2,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/rl_arena/cot_engine.py",
+      "category": "production",
+      "physical": 40,
+      "code": 23,
+      "blank": 5,
+      "comment": 12
+    },
+    {
+      "path": "services/api/src/neuralis/rl_arena/frames.py",
+      "category": "production",
+      "physical": 22,
+      "code": 14,
+      "blank": 6,
+      "comment": 2
+    },
+    {
+      "path": "services/api/src/neuralis/rl_arena/gridworld.py",
+      "category": "production",
+      "physical": 88,
+      "code": 68,
+      "blank": 15,
+      "comment": 5
+    },
+    {
+      "path": "services/api/src/neuralis/rl_arena/temporal_debugger.py",
+      "category": "production",
+      "physical": 52,
+      "code": 39,
+      "blank": 8,
+      "comment": 5
+    },
+    {
+      "path": "services/api/src/neuralis/rl_arena/trajectory_db.py",
+      "category": "production",
+      "physical": 204,
+      "code": 157,
+      "blank": 24,
+      "comment": 23
+    },
+    {
+      "path": "services/api/src/neuralis/rl_arena/webrtc_streamer.py",
+      "category": "production",
+      "physical": 149,
+      "code": 116,
+      "blank": 24,
+      "comment": 9
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/acceleration/__init__.py",
+      "category": "production",
+      "physical": 3,
+      "code": 2,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/acceleration/backends.py",
+      "category": "production",
+      "physical": 95,
+      "code": 66,
+      "blank": 13,
+      "comment": 16
     },
     {
       "path": "services/api/src/neuralis/runtime/capture.py",
@@ -1415,10 +2263,10 @@
     {
       "path": "services/api/src/neuralis/runtime/devices.py",
       "category": "production",
-      "physical": 82,
-      "code": 64,
+      "physical": 81,
+      "code": 66,
       "blank": 13,
-      "comment": 5
+      "comment": 2
     },
     {
       "path": "services/api/src/neuralis/runtime/profiler.py",
@@ -1429,11 +2277,27 @@
       "comment": 4
     },
     {
+      "path": "services/api/src/neuralis/runtime/quantization/__init__.py",
+      "category": "production",
+      "physical": 3,
+      "code": 2,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/quantization/nf4_quantizer.py",
+      "category": "production",
+      "physical": 172,
+      "code": 143,
+      "blank": 22,
+      "comment": 7
+    },
+    {
       "path": "services/api/src/neuralis/runtime/supervisor.py",
       "category": "production",
-      "physical": 336,
-      "code": 294,
-      "blank": 28,
+      "physical": 346,
+      "code": 302,
+      "blank": 30,
       "comment": 14
     },
     {
@@ -1443,6 +2307,22 @@
       "code": 126,
       "blank": 18,
       "comment": 3
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/training/__init__.py",
+      "category": "production",
+      "physical": 3,
+      "code": 2,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/training/qlora_engine.py",
+      "category": "production",
+      "physical": 364,
+      "code": 300,
+      "blank": 34,
+      "comment": 30
     },
     {
       "path": "services/api/src/neuralis/sdk.py",
@@ -1469,6 +2349,38 @@
       "comment": 4
     },
     {
+      "path": "services/api/src/neuralis/synthetic/__init__.py",
+      "category": "production",
+      "physical": 5,
+      "code": 2,
+      "blank": 2,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/synthetic/foundry.py",
+      "category": "production",
+      "physical": 161,
+      "code": 117,
+      "blank": 23,
+      "comment": 21
+    },
+    {
+      "path": "services/api/src/neuralis/synthetic/llm_as_a_judge.py",
+      "category": "production",
+      "physical": 9,
+      "code": 2,
+      "blank": 3,
+      "comment": 4
+    },
+    {
+      "path": "services/api/src/neuralis/synthetic/rejection_sampling.py",
+      "category": "production",
+      "physical": 5,
+      "code": 2,
+      "blank": 2,
+      "comment": 1
+    },
+    {
       "path": "services/api/tests/conftest.py",
       "category": "tests",
       "physical": 11,
@@ -1493,12 +2405,52 @@
       "comment": 0
     },
     {
+      "path": "services/api/tests/test_efficient_runtime.py",
+      "category": "tests",
+      "physical": 434,
+      "code": 373,
+      "blank": 61,
+      "comment": 0
+    },
+    {
+      "path": "services/api/tests/test_extensions_api.py",
+      "category": "tests",
+      "physical": 189,
+      "code": 157,
+      "blank": 28,
+      "comment": 4
+    },
+    {
+      "path": "services/api/tests/test_graph_surgery.py",
+      "category": "tests",
+      "physical": 85,
+      "code": 72,
+      "blank": 13,
+      "comment": 0
+    },
+    {
+      "path": "services/api/tests/test_interpretability_extension.py",
+      "category": "tests",
+      "physical": 280,
+      "code": 231,
+      "blank": 45,
+      "comment": 4
+    },
+    {
       "path": "services/api/tests/test_numerics.py",
       "category": "tests",
       "physical": 125,
       "code": 102,
       "blank": 23,
       "comment": 0
+    },
+    {
+      "path": "services/api/tests/test_research_services.py",
+      "category": "tests",
+      "physical": 305,
+      "code": 264,
+      "blank": 39,
+      "comment": 2
     },
     {
       "path": "services/worker/neuralis_worker/__init__.py",

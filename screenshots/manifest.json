@@ -148,7 +148,128 @@
       "title": "Responsive mobile demo library",
       "capturedAt": "2026-10-09T12:09:19.077Z",
       "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 19,
+      "file": "019-axislab.png",
+      "title": "AxisLab paired directions and held-out evaluation",
+      "route": "/research",
+      "capturedAt": "2026-10-09T17:19:51.481Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 20,
+      "file": "020-nf4.png",
+      "title": "Packed NF4 quantization and reconstruction",
+      "route": "/research",
+      "capturedAt": "2026-10-09T17:19:54.485Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 21,
+      "file": "021-lora.png",
+      "title": "Measured frozen-base low-rank adaptation",
+      "route": "/research",
+      "capturedAt": "2026-10-09T17:19:59.409Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 22,
+      "file": "022-data-foundry.png",
+      "title": "Verified synthetic JSONL generation and split",
+      "route": "/research",
+      "capturedAt": "2026-10-09T17:20:01.138Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 23,
+      "file": "023-local-rag.png",
+      "title": "Local retrieval with actual encrypted backend collection",
+      "route": "/research",
+      "capturedAt": "2026-10-09T17:20:03.044Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 24,
+      "file": "024-rl-arena.png",
+      "title": "Actual tabular policy training and trajectory replay",
+      "route": "/research",
+      "capturedAt": "2026-10-09T17:20:05.200Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 25,
+      "file": "025-mario-temporal-debugger.png",
+      "title": "Actual NES pixels and persisted policy evidence",
+      "route": "/research",
+      "capturedAt": "2026-10-09T17:20:07.212Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 26,
+      "file": "026-mario-live-video.png",
+      "title": "Actual WebRTC capability diagnosis under managed browser UDP restrictions",
+      "route": "/research",
+      "capturedAt": "2026-10-09T17:20:12.490Z",
+      "kind": "actual-application-screenshot",
+      "transport": "blocked-by-managed-browser-policy",
+      "frameSource": "local NES policy recorder",
+      "decodedBrowserVideo": false
+    },
+    {
+      "number": 27,
+      "file": "027-token-xray.png",
+      "title": "Actual trained Transformer inference and residual logit lens",
+      "route": "/inference",
+      "capturedAt": "2026-10-09T17:20:20.202Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 28,
+      "file": "028-webgpu-observatory.png",
+      "title": "Actual WGSL activation particle rendering",
+      "route": "/advanced",
+      "capturedAt": "2026-10-09T17:20:22.206Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 29,
+      "file": "029-attention-splines.png",
+      "title": "Weighted curves from captured causal attention",
+      "route": "/advanced",
+      "capturedAt": "2026-10-09T17:20:23.931Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 30,
+      "file": "030-latent-galaxy.png",
+      "title": "Measured PCA of learned vocabulary embeddings",
+      "route": "/advanced",
+      "capturedAt": "2026-10-09T17:20:25.851Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 31,
+      "file": "031-graph-surgery.png",
+      "title": "Actual backend residual DAG compilation and evaluation",
+      "route": "/graph",
+      "capturedAt": "2026-10-09T17:20:28.717Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 32,
+      "file": "032-mobile-research-workbench.png",
+      "title": "Responsive research extensions on mobile",
+      "route": "/research",
+      "capturedAt": "2026-10-09T17:20:30.008Z",
+      "kind": "actual-application-screenshot"
     }
   ],
-  "pageErrors": []
+  "pageErrors": [],
+  "extensionValidation": {
+    "backend": "local PyTorch API",
+    "frameEvidence": "actual stored NES captures",
+    "browserWebRTC": "blocked-by-managed-browser-policy",
+    "browserErrors": []
+  }
 }

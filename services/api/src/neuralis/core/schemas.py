@@ -49,11 +49,12 @@ class RunConfig(StrictModel):
     checkpoint_every: int = Field(default=0, ge=0, le=100000)
     validation_every: int = Field(default=10, ge=1, le=10000)
     step_delay_ms: int = Field(default=0, ge=0, le=1000)
-    device: Literal["cpu", "cuda", "mps", "auto"] = "cpu"
+    device: Literal["cpu", "cuda", "mps", "rocm", "auto"] = "cpu"
     architecture: "ArchitectureConfig" = Field(default_factory=lambda: ArchitectureConfig())
     optimizer: "OptimizerConfig" = Field(default_factory=lambda: OptimizerConfig())
     schedule: "ScheduleConfig" = Field(default_factory=lambda: ScheduleConfig())
     dataset_id: str | None = Field(default=None, max_length=128)
+    adapter: "AdapterConfig" = Field(default_factory=lambda: AdapterConfig())
 
     @model_validator(mode="after")
     def compatibility_capture_frequency(self):
@@ -146,6 +147,25 @@ class OptimizerConfig(StrictModel):
     def validate_nesterov(self):
         if self.nesterov and (self.name != "sgd" or self.momentum <= 0):
             raise ValueError("Nesterov requires SGD with positive momentum")
+        return self
+
+
+class AdapterConfig(StrictModel):
+    """Opt-in low-rank training; registered architecture and data stay unchanged."""
+    enabled: bool = False
+    rank: int = Field(default=4, ge=1, le=64)
+    alpha: float = Field(default=8, gt=0, le=256)
+    target_modules: list[str] = Field(default_factory=list, max_length=32)
+    quantize_base: bool = False
+
+    @model_validator(mode="after")
+    def validate_adapter(self):
+        if self.quantize_base and not self.enabled:
+            raise ValueError("Quantized-base training requires an enabled low-rank adapter")
+        if any(not name or len(name) > 200 for name in self.target_modules):
+            raise ValueError("Adapter target modules must be nonempty bounded module paths")
+        if len(self.target_modules) != len(set(self.target_modules)):
+            raise ValueError("Adapter target modules must be unique")
         return self
 
 

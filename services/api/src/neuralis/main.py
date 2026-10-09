@@ -26,6 +26,7 @@ from neuralis.datasets.synthetic import dataset_for
 from neuralis.datasets.imports import CSVImport, DatasetImport, parse_csv
 from neuralis.api.middleware import BodyLimitMiddleware
 from neuralis.api.research import register_research_routes
+from neuralis.api.extensions import init_extensions, register_extension_routes
 from neuralis.lab.auth import Authenticator, Principal, principal_for
 from neuralis.lab.coordinator import CompletionRequest, Coordinator, HeartbeatRequest, LeaseConflict, LeaseRequest, QueueRequest, WorkerRegistration
 from neuralis.models.registry import DEFINITIONS, build_model, model_graph
@@ -53,7 +54,7 @@ class RestoreRequest(BaseModel):
 
 
 class SAERequest(BaseModel):
-    input: InferenceRequest = Field(default_factory=lambda: InferenceRequest(sample_indices=list(range(64))))
+    input: InferenceRequest = Field(default_factory=lambda: InferenceRequest(sample_indices=list(range(64)), split="train"))
     module: str
     features: int = Field(default=64, ge=1, le=512)
     steps: int = Field(default=100, ge=1, le=500)
@@ -70,9 +71,12 @@ def create_app(data_directory: Path | None = None):
         app.state.sweeps = SweepManager(app.state.supervisor)
         app.state.auth = Authenticator()
         app.state.started_at = time.time()
+        init_extensions(app, directory)
         yield
         await asyncio.to_thread(app.state.sweeps.shutdown)
         await asyncio.to_thread(app.state.supervisor.shutdown)
+        await app.state.extensions.close_streams()
+        await asyncio.to_thread(app.state.extensions.close)
 
     app = FastAPI(title="Neuralis Studio research API", version=__version__, lifespan=lifespan)
     origins = [origin.strip() for origin in os.getenv("NEURALIS_CORS_ORIGINS",
@@ -495,6 +499,7 @@ def create_app(data_directory: Path | None = None):
         return request.app.state.coordinator.cancel(job_id)
 
     register_research_routes(router, run_access, authorize, require_admin)
+    register_extension_routes(router, run_access, require_admin)
     app.include_router(router, prefix="/api/v1")
     app.include_router(router, include_in_schema=False)
 

@@ -15,6 +15,10 @@ import { Readiness } from './features/Readiness';
 import { RepresentationExplorer } from './features/RepresentationExplorer';
 import { DatasetWorkbench } from './research/DatasetWorkbench';
 import { Laboratory, Settings } from './features/Workspace';
+import { AdvancedResearch } from './features/AdvancedResearch';
+import { ResearchWorkbench } from './features/ResearchWorkbench';
+import { InferenceStream } from './features/InferenceStream';
+import { ComputationalGraphCanvas } from './features/GraphEditor';
 
 class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
   state: { error: Error | null } = { error: null };
@@ -44,6 +48,10 @@ export default function App() {
     <Route path="/representations" element={<RepresentationExplorer />} />
     <Route path="/datasets" element={<DatasetWorkbench />} />
     <Route path="/settings" element={<Settings />} />
+    <Route path="/research" element={<ResearchWorkbench />} />
+    <Route path="/advanced" element={<AdvancedResearch />} />
+    <Route path="/inference" element={<InferenceStream />} />
+    <Route path="/graph" element={<ComputationalGraphCanvas />} />
     <Route path="*" element={<Overview />} />
   </Routes></Shell></StudioProvider></HashRouter></ErrorBoundary>;
 }

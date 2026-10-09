@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "axislab-poc"
+version = "0.3.0"
+description = "AxisLab: independent representation engineering, sparse features, causal interventions and linear memory editing and local latent-state observability"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.3"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+# Install these separately and pin versions appropriate for your model.
+transformerlens = ["transformer_lens>=4.0"]
+nnsight = ["nnsight>=0.7"]
+saelens = ["sae_lens>=6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
