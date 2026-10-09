@@ -6,7 +6,7 @@
     "production": 23413,
     "configuration_code": 54,
     "tests": 2034,
-    "tooling": 197
+    "tooling": 198
   },
   "languages": {
     ".ts": 8875,
@@ -16,7 +16,7 @@
     ".css": 2145,
     ".sh": 40,
     ".js": 283,
-    ".mjs": 94
+    ".mjs": 95
   },
   "file_count": 198,
   "files": [
@@ -1239,8 +1239,8 @@
     {
       "path": "scripts/capture-screenshots.mjs",
       "category": "tooling",
-      "physical": 66,
-      "code": 65,
+      "physical": 67,
+      "code": 66,
       "blank": 1,
       "comment": 0
     },
