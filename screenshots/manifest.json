@@ -1,0 +1,154 @@
+{
+  "viewport": {
+    "width": 1600,
+    "height": 1050
+  },
+  "source": "local built application",
+  "screenshots": [
+    {
+      "number": 1,
+      "file": "001-overview.png",
+      "route": "/",
+      "title": "Research overview",
+      "capturedAt": "2026-10-09T12:08:57.305Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 2,
+      "file": "002-demo-library.png",
+      "route": "/demos",
+      "title": "Runnable browser demo library",
+      "capturedAt": "2026-10-09T12:09:01.413Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 3,
+      "file": "003-training.png",
+      "route": "/training",
+      "title": "Real browser model training",
+      "capturedAt": "2026-10-09T12:09:02.381Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 4,
+      "file": "004-network-explorer.png",
+      "route": "/visualization",
+      "title": "Interactive neural network explorer",
+      "capturedAt": "2026-10-09T12:09:04.816Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 5,
+      "file": "005-tensor-inspector.png",
+      "route": "/tensors",
+      "title": "Measured weights, gradients and activations",
+      "capturedAt": "2026-10-09T12:09:05.774Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 6,
+      "file": "006-attention.png",
+      "route": "/attention",
+      "title": "Attention inspection and capability states",
+      "capturedAt": "2026-10-09T12:09:06.749Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 7,
+      "file": "007-interventions.png",
+      "route": "/interventions",
+      "title": "Controlled activation interventions",
+      "capturedAt": "2026-10-09T12:09:08.036Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 8,
+      "file": "008-experiments.png",
+      "route": "/experiments",
+      "title": "Recorded experiments and replay",
+      "capturedAt": "2026-10-09T12:09:08.827Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 9,
+      "file": "009-comparison.png",
+      "route": "/compare",
+      "title": "Run comparison",
+      "capturedAt": "2026-10-09T12:09:09.547Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 10,
+      "file": "010-datasets.png",
+      "route": "/data",
+      "title": "Dataset exploration and custom CSV import",
+      "capturedAt": "2026-10-09T12:09:10.315Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 11,
+      "file": "011-infrastructure.png",
+      "route": "/lab",
+      "title": "Actual Python runtime connection",
+      "capturedAt": "2026-10-09T12:09:11.150Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 12,
+      "file": "012-settings.png",
+      "route": "/settings",
+      "title": "Workspace and desktop runtime settings",
+      "capturedAt": "2026-10-09T12:09:12.280Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 13,
+      "file": "013-new-experiment.png",
+      "route": "/new-experiment",
+      "title": "Experiment configuration wizard",
+      "capturedAt": "2026-10-09T12:09:13.237Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 14,
+      "file": "014-artifacts.png",
+      "route": "/artifacts",
+      "title": "Checkpoint and artifact management",
+      "capturedAt": "2026-10-09T12:09:14.261Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 15,
+      "file": "015-readiness.png",
+      "route": "/readiness",
+      "title": "Execution and capability diagnostics",
+      "capturedAt": "2026-10-09T12:09:15.297Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 16,
+      "file": "016-representations.png",
+      "route": "/representations",
+      "title": "Representation analysis workbench",
+      "capturedAt": "2026-10-09T12:09:16.305Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 17,
+      "file": "017-dataset-preparation.png",
+      "route": "/datasets",
+      "title": "Leakage-safe CSV dataset preparation",
+      "capturedAt": "2026-10-09T12:09:17.137Z",
+      "kind": "actual-application-screenshot"
+    },
+    {
+      "number": 18,
+      "file": "018-mobile-demo-library.png",
+      "route": "/demos",
+      "title": "Responsive mobile demo library",
+      "capturedAt": "2026-10-09T12:09:19.077Z",
+      "kind": "actual-application-screenshot"
+    }
+  ],
+  "pageErrors": []
+}

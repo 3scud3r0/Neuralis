@@ -1,0 +1,60 @@
+name: neuralis
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.api
+    ports:
+      - "127.0.0.1:${NEURALIS_PORT:-8000}:8000"
+    environment:
+      NEURALIS_TOKEN: ${NEURALIS_TOKEN:?Set NEURALIS_TOKEN to a random token of at least 32 bytes}
+      NEURALIS_HOST: 0.0.0.0
+      NEURALIS_DATA: /data
+      NEURALIS_CORS_ORIGINS: ${NEURALIS_CORS_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
+      OMP_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "1"
+    volumes:
+      - api-data:/data
+    read_only: true
+    tmpfs:
+      - /tmp:size=256m,mode=1777
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    init: true
+    pids_limit: 256
+    mem_limit: 4g
+    cpus: 2.0
+    restart: unless-stopped
+  worker:
+    profiles: [worker]
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.worker
+    # Sharing the API network namespace enables verified loopback HTTP. Neither
+    # worker nor API publishes a public plaintext listener on the host.
+    network_mode: "service:api"
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      NEURALIS_COORDINATOR: http://127.0.0.1:8000
+      NEURALIS_WORKER_TOKEN: ${NEURALIS_TOKEN:?Set NEURALIS_TOKEN}
+      NEURALIS_WORKER_ID: ${NEURALIS_WORKER_ID:-compose-cpu-1}
+      NEURALIS_WORKER_CPU_THREADS: "2"
+      NEURALIS_WORKER_MEMORY_MB: "512"
+      NEURALIS_WORKER_TIMEOUT: "300"
+    volumes:
+      - worker-data:/work
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    init: true
+    pids_limit: 64
+    mem_limit: 768m
+    cpus: 2.0
+    restart: unless-stopped
+volumes:
+  api-data:
+  worker-data:

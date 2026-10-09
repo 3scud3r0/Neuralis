@@ -1,0 +1,20 @@
+import { LayoutDashboard, Box, Activity, Table2, ScanEye, FlaskConical, Layers, Library, Users, Settings, GitCompareArrows, Database, FolderArchive, CheckCircle2, PlusCircle, Orbit } from 'lucide-react';
+export const navigation = [
+  { path: '/', label: 'Overview', icon: LayoutDashboard, group: 'Workspace', description: 'Your research at a glance' },
+  { path: '/new-experiment', label: 'New experiment', icon: PlusCircle, group: 'Workspace', description: 'Configure a reproducible browser run' },
+  { path: '/visualization', label: 'Network explorer', icon: Box, group: 'Workspace', description: 'Explore architecture in 3D' },
+  { path: '/training', label: 'Training', icon: Activity, group: 'Workspace', description: 'Real-time optimization and checkpoints' },
+  { path: '/tensors', label: 'Tensor inspector', icon: Table2, group: 'Workspace', description: 'Inspect weights and activations' },
+  { path: '/representations', label: 'Representations', icon: Orbit, group: 'Research', description: 'Architecture, PCA, circuits, and slices' },
+  { path: '/attention', label: 'Attention', icon: ScanEye, group: 'Research', description: 'Inspect token attention patterns' },
+  { path: '/interventions', label: 'Interventions', icon: FlaskConical, group: 'Research', description: 'Causal activation experiments' },
+  { path: '/experiments', label: 'Experiments', icon: Layers, group: 'Research', description: 'History, comparison, and replay' },
+  { path: '/compare', label: 'Compare runs', icon: GitCompareArrows, group: 'Research', description: 'Compare your saved run metrics' },
+  { path: '/data', label: 'Data explorer', icon: Database, group: 'Research', description: 'Inspect actual model examples' },
+  { path: '/datasets', label: 'Dataset preparation', icon: Database, group: 'Laboratory', description: 'Prepare and train imported CSV datasets' },
+  { path: '/artifacts', label: 'Checkpoints & artifacts', icon: FolderArchive, group: 'Laboratory', description: 'Inspect, restore, compare, and export models' },
+  { path: '/readiness', label: 'Environment readiness', icon: CheckCircle2, group: 'Laboratory', description: 'Capabilities and actual CPU benchmark' },
+  { path: '/demos', label: 'Demo library', icon: Library, group: 'Laboratory', description: 'Launch runnable learning experiments' },
+  { path: '/lab', label: 'Infrastructure', icon: Users, group: 'Laboratory', description: 'Connect your local research backend' },
+  { path: '/settings', label: 'Settings', icon: Settings, group: 'Laboratory', description: 'Workspace preferences and portability' },
+];

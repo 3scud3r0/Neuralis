@@ -1,0 +1,224 @@
+{
+  "schema": "neuralis.mario.intervention/v1",
+  "layer": "actor",
+  "channels": [],
+  "scale": 0.0,
+  "checkpointTransitions": 2048,
+  "original": {
+    "environment": "SuperMarioBros-1-1-v0",
+    "episodes": 3,
+    "seed": 100042,
+    "episodeSeeds": [
+      100042,
+      101051,
+      102060
+    ],
+    "initialNoopMax": 10,
+    "deterministic": true,
+    "successes": 0,
+    "successRate": 0.0,
+    "successRate95CI": [
+      0.0,
+      0.5615060804490177
+    ],
+    "returns": [
+      250.0,
+      250.0,
+      247.0
+    ],
+    "meanReturn": 249.0,
+    "stdReturn": 1.4142135623730951,
+    "maxX": 314,
+    "meanEpisodeLength": 30.0,
+    "results": [
+      {
+        "episode": 1,
+        "reward": 250.0,
+        "length": 30,
+        "frames": 120,
+        "flagGet": false,
+        "xPos": 314,
+        "stage": "SuperMarioBros-1-1-v0",
+        "terminated": true,
+        "truncated": false
+      },
+      {
+        "episode": 2,
+        "reward": 250.0,
+        "length": 30,
+        "frames": 120,
+        "flagGet": false,
+        "xPos": 314,
+        "stage": "SuperMarioBros-1-1-v0",
+        "terminated": true,
+        "truncated": false
+      },
+      {
+        "episode": 3,
+        "reward": 247.0,
+        "length": 30,
+        "frames": 119,
+        "flagGet": false,
+        "xPos": 311,
+        "stage": "SuperMarioBros-1-1-v0",
+        "terminated": true,
+        "truncated": false
+      }
+    ],
+    "captures": [
+      {
+        "file": "001-episode-01-step-00001.png",
+        "episode": 1,
+        "step": 1,
+        "action": 4,
+        "xPos": 40
+      },
+      {
+        "file": "002-episode-01-step-00030.png",
+        "episode": 1,
+        "step": 30,
+        "action": 4,
+        "xPos": 314
+      },
+      {
+        "file": "003-episode-02-step-00001.png",
+        "episode": 2,
+        "step": 1,
+        "action": 4,
+        "xPos": 40
+      },
+      {
+        "file": "004-episode-02-step-00030.png",
+        "episode": 2,
+        "step": 30,
+        "action": 4,
+        "xPos": 314
+      },
+      {
+        "file": "005-episode-03-step-00001.png",
+        "episode": 3,
+        "step": 1,
+        "action": 4,
+        "xPos": 40
+      },
+      {
+        "file": "006-episode-03-step-00030.png",
+        "episode": 3,
+        "step": 30,
+        "action": 4,
+        "xPos": 311
+      }
+    ],
+    "note": "Finite empirical evaluation across seeded initial no-ops. Wilson interval assumes independent episodes; deterministic NES starts can remain correlated. A small sample does not establish perfect play."
+  },
+  "intervened": {
+    "environment": "SuperMarioBros-1-1-v0",
+    "episodes": 3,
+    "seed": 100042,
+    "episodeSeeds": [
+      100042,
+      101051,
+      102060
+    ],
+    "initialNoopMax": 10,
+    "deterministic": true,
+    "successes": 0,
+    "successRate": 0.0,
+    "successRate95CI": [
+      0.0,
+      0.5615060804490177
+    ],
+    "returns": [
+      -26.0,
+      -25.0,
+      -25.0
+    ],
+    "meanReturn": -25.333333333333332,
+    "stdReturn": 0.4714045207910317,
+    "maxX": 40,
+    "meanEpisodeLength": 128.0,
+    "results": [
+      {
+        "episode": 1,
+        "reward": -26.0,
+        "length": 128,
+        "frames": 512,
+        "flagGet": false,
+        "xPos": 40,
+        "stage": "SuperMarioBros-1-1-v0",
+        "terminated": false,
+        "truncated": true
+      },
+      {
+        "episode": 2,
+        "reward": -25.0,
+        "length": 128,
+        "frames": 512,
+        "flagGet": false,
+        "xPos": 40,
+        "stage": "SuperMarioBros-1-1-v0",
+        "terminated": false,
+        "truncated": true
+      },
+      {
+        "episode": 3,
+        "reward": -25.0,
+        "length": 128,
+        "frames": 512,
+        "flagGet": false,
+        "xPos": 40,
+        "stage": "SuperMarioBros-1-1-v0",
+        "terminated": false,
+        "truncated": true
+      }
+    ],
+    "captures": [
+      {
+        "file": "001-episode-01-step-00001.png",
+        "episode": 1,
+        "step": 1,
+        "action": 0,
+        "xPos": 40
+      },
+      {
+        "file": "002-episode-01-step-00121.png",
+        "episode": 1,
+        "step": 121,
+        "action": 0,
+        "xPos": 40
+      },
+      {
+        "file": "003-episode-01-step-00128.png",
+        "episode": 1,
+        "step": 128,
+        "action": 0,
+        "xPos": 40
+      },
+      {
+        "file": "004-episode-02-step-00001.png",
+        "episode": 2,
+        "step": 1,
+        "action": 0,
+        "xPos": 40
+      },
+      {
+        "file": "005-episode-02-step-00121.png",
+        "episode": 2,
+        "step": 121,
+        "action": 0,
+        "xPos": 40
+      },
+      {
+        "file": "006-episode-02-step-00128.png",
+        "episode": 2,
+        "step": 128,
+        "action": 0,
+        "xPos": 40
+      }
+    ],
+    "note": "Finite empirical evaluation across seeded initial no-ops. Wilson interval assumes independent episodes; deterministic NES starts can remain correlated. A small sample does not establish perfect play."
+  },
+  "meanReturnDelta": -274.3333333333333,
+  "successRateDelta": 0.0,
+  "note": "Same seeded starts and per-episode limits. Effects are observed in this finite evaluation; they do not prove general causal semantics."
+}

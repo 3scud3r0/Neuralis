@@ -1,0 +1,20 @@
+# Overlay for managed cloud builds: trust the mounted combined public CA bundle.
+services:
+  api:
+    build:
+      secrets: [system_ca]
+    volumes:
+      - ${NEURALIS_SYSTEM_CA:-/etc/ssl/certs/ca-certificates.crt}:/run/neuralis-system-ca.pem:ro
+    environment:
+      SSL_CERT_FILE: /run/neuralis-system-ca.pem
+      REQUESTS_CA_BUNDLE: /run/neuralis-system-ca.pem
+  worker:
+    build:
+      secrets: [system_ca]
+    volumes:
+      - ${NEURALIS_SYSTEM_CA:-/etc/ssl/certs/ca-certificates.crt}:/run/neuralis-system-ca.pem:ro
+    environment:
+      SSL_CERT_FILE: /run/neuralis-system-ca.pem
+secrets:
+  system_ca:
+    file: ${NEURALIS_SYSTEM_CA:-/etc/ssl/certs/ca-certificates.crt}

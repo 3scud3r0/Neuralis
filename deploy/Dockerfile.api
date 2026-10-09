@@ -1,0 +1,22 @@
+# syntax=docker/dockerfile:1.7
+FROM python:3.12-slim-bookworm AS runtime
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 UV_COMPILE_BYTECODE=1 \
+    UV_PROJECT_ENVIRONMENT=/opt/neuralis/venv PATH=/opt/neuralis/venv/bin:$PATH \
+    NEURALIS_HOST=0.0.0.0 NEURALIS_PORT=8000 NEURALIS_DATA=/data
+WORKDIR /opt/neuralis/api
+COPY services/api/pyproject.toml services/api/uv.lock ./
+RUN --mount=type=secret,id=system_ca,required=false \
+    if [ -f /run/secrets/system_ca ]; then export PIP_CERT=/run/secrets/system_ca SSL_CERT_FILE=/run/secrets/system_ca; fi; \
+    pip install --no-cache-dir --disable-pip-version-check uv==0.8.15 && \
+    uv sync --frozen --no-dev --no-install-project --extra lab
+COPY services/api/src ./src
+RUN --mount=type=secret,id=system_ca,required=false \
+    if [ -f /run/secrets/system_ca ]; then export SSL_CERT_FILE=/run/secrets/system_ca; fi; \
+    uv sync --frozen --no-dev --extra lab && \
+    groupadd --gid 10001 neuralis && useradd --uid 10001 --gid neuralis --no-create-home neuralis && \
+    mkdir -p /data && chown neuralis:neuralis /data
+USER 10001:10001
+EXPOSE 8000
+HEALTHCHECK --interval=10s --timeout=3s --start-period=45s --retries=6 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+CMD ["python", "-m", "neuralis"]

@@ -1,0 +1,1608 @@
+{
+  "metric": "physical nonblank non-comment source lines; tests/tooling/config separated",
+  "production_target": 30000,
+  "production_target_met": false,
+  "totals": {
+    "production": 23413,
+    "configuration_code": 54,
+    "tests": 2034,
+    "tooling": 197
+  },
+  "languages": {
+    ".ts": 8875,
+    ".py": 6917,
+    ".rs": 1950,
+    ".tsx": 5394,
+    ".css": 2145,
+    ".sh": 40,
+    ".js": 283,
+    ".mjs": 94
+  },
+  "file_count": 198,
+  "files": [
+    {
+      "path": "apps/desktop/bridge.ts",
+      "category": "production",
+      "physical": 60,
+      "code": 59,
+      "blank": 0,
+      "comment": 1
+    },
+    {
+      "path": "apps/desktop/scripts/doctor.py",
+      "category": "production",
+      "physical": 44,
+      "code": 35,
+      "blank": 6,
+      "comment": 3
+    },
+    {
+      "path": "apps/desktop/src-tauri/build.rs",
+      "category": "configuration_code",
+      "physical": 4,
+      "code": 4,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/desktop/src-tauri/examples/runtime_smoke.rs",
+      "category": "production",
+      "physical": 47,
+      "code": 46,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/desktop/src-tauri/src/config.rs",
+      "category": "production",
+      "physical": 179,
+      "code": 169,
+      "blank": 9,
+      "comment": 1
+    },
+    {
+      "path": "apps/desktop/src-tauri/src/diagnostics.rs",
+      "category": "production",
+      "physical": 199,
+      "code": 189,
+      "blank": 9,
+      "comment": 1
+    },
+    {
+      "path": "apps/desktop/src-tauri/src/files.rs",
+      "category": "production",
+      "physical": 195,
+      "code": 183,
+      "blank": 11,
+      "comment": 1
+    },
+    {
+      "path": "apps/desktop/src-tauri/src/lib.rs",
+      "category": "production",
+      "physical": 24,
+      "code": 22,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/desktop/src-tauri/src/main.rs",
+      "category": "production",
+      "physical": 325,
+      "code": 299,
+      "blank": 25,
+      "comment": 1
+    },
+    {
+      "path": "apps/desktop/src-tauri/src/runtime.rs",
+      "category": "production",
+      "physical": 337,
+      "code": 317,
+      "blank": 15,
+      "comment": 5
+    },
+    {
+      "path": "apps/desktop/src-tauri/src/security.rs",
+      "category": "production",
+      "physical": 128,
+      "code": 118,
+      "blank": 10,
+      "comment": 0
+    },
+    {
+      "path": "apps/desktop/src-tauri/src/workspace.rs",
+      "category": "production",
+      "physical": 643,
+      "code": 603,
+      "blank": 36,
+      "comment": 4
+    },
+    {
+      "path": "apps/web/src/App.tsx",
+      "category": "production",
+      "physical": 49,
+      "code": 48,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/app/Shell.tsx",
+      "category": "production",
+      "physical": 66,
+      "code": 64,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/app/StudioContext.tsx",
+      "category": "production",
+      "physical": 244,
+      "code": 233,
+      "blank": 11,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/app/navigation.ts",
+      "category": "production",
+      "physical": 20,
+      "code": 20,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/app/storage.ts",
+      "category": "production",
+      "physical": 77,
+      "code": 71,
+      "blank": 6,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/components/RunControls.tsx",
+      "category": "production",
+      "physical": 20,
+      "code": 19,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/components/ui.tsx",
+      "category": "production",
+      "physical": 56,
+      "code": 55,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/engine/__tests__/advanced.test.ts",
+      "category": "tests",
+      "physical": 144,
+      "code": 134,
+      "blank": 10,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/engine/__tests__/controller.test.ts",
+      "category": "tests",
+      "physical": 121,
+      "code": 110,
+      "blank": 11,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/engine/__tests__/network.test.ts",
+      "category": "tests",
+      "physical": 69,
+      "code": 65,
+      "blank": 4,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/engine/__tests__/specialists.test.ts",
+      "category": "tests",
+      "physical": 60,
+      "code": 54,
+      "blank": 6,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/engine/bandit.ts",
+      "category": "production",
+      "physical": 116,
+      "code": 100,
+      "blank": 13,
+      "comment": 3
+    },
+    {
+      "path": "apps/web/src/engine/catalog.ts",
+      "category": "production",
+      "physical": 162,
+      "code": 159,
+      "blank": 2,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/engine/cnn.ts",
+      "category": "production",
+      "physical": 171,
+      "code": 153,
+      "blank": 16,
+      "comment": 2
+    },
+    {
+      "path": "apps/web/src/engine/controller.ts",
+      "category": "production",
+      "physical": 347,
+      "code": 313,
+      "blank": 27,
+      "comment": 7
+    },
+    {
+      "path": "apps/web/src/engine/datasets.ts",
+      "category": "production",
+      "physical": 298,
+      "code": 281,
+      "blank": 15,
+      "comment": 2
+    },
+    {
+      "path": "apps/web/src/engine/dense-model.ts",
+      "category": "production",
+      "physical": 100,
+      "code": 90,
+      "blank": 10,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/engine/gridworld.ts",
+      "category": "production",
+      "physical": 214,
+      "code": 198,
+      "blank": 16,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/engine/gru.ts",
+      "category": "production",
+      "physical": 207,
+      "code": 188,
+      "blank": 18,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/engine/index.ts",
+      "category": "production",
+      "physical": 7,
+      "code": 7,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/engine/kmeans.ts",
+      "category": "production",
+      "physical": 134,
+      "code": 118,
+      "blank": 14,
+      "comment": 2
+    },
+    {
+      "path": "apps/web/src/engine/layers.ts",
+      "category": "production",
+      "physical": 337,
+      "code": 304,
+      "blank": 27,
+      "comment": 6
+    },
+    {
+      "path": "apps/web/src/engine/math.ts",
+      "category": "production",
+      "physical": 108,
+      "code": 89,
+      "blank": 18,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/engine/model.ts",
+      "category": "production",
+      "physical": 15,
+      "code": 14,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/engine/network.ts",
+      "category": "production",
+      "physical": 293,
+      "code": 271,
+      "blank": 21,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/engine/optimizers.ts",
+      "category": "production",
+      "physical": 177,
+      "code": 153,
+      "blank": 23,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/engine/pca.ts",
+      "category": "production",
+      "physical": 121,
+      "code": 108,
+      "blank": 12,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/engine/random.ts",
+      "category": "production",
+      "physical": 60,
+      "code": 51,
+      "blank": 8,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/engine/transformer.ts",
+      "category": "production",
+      "physical": 305,
+      "code": 279,
+      "blank": 20,
+      "comment": 6
+    },
+    {
+      "path": "apps/web/src/features/Artifacts.tsx",
+      "category": "production",
+      "physical": 51,
+      "code": 50,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/DemoLibrary.tsx",
+      "category": "production",
+      "physical": 34,
+      "code": 33,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/DesktopRuntime.tsx",
+      "category": "production",
+      "physical": 36,
+      "code": 35,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/ExperimentWizard.tsx",
+      "category": "production",
+      "physical": 61,
+      "code": 59,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/Experiments.tsx",
+      "category": "production",
+      "physical": 45,
+      "code": 43,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/Inspectors.tsx",
+      "category": "production",
+      "physical": 54,
+      "code": 51,
+      "blank": 3,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/Interventions.tsx",
+      "category": "production",
+      "physical": 37,
+      "code": 36,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/NetworkExplorer.tsx",
+      "category": "production",
+      "physical": 40,
+      "code": 39,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/Overview.tsx",
+      "category": "production",
+      "physical": 21,
+      "code": 20,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/Readiness.tsx",
+      "category": "production",
+      "physical": 79,
+      "code": 78,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/RepresentationExplorer.tsx",
+      "category": "production",
+      "physical": 32,
+      "code": 31,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/Training.tsx",
+      "category": "production",
+      "physical": 32,
+      "code": 31,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/features/Workspace.tsx",
+      "category": "production",
+      "physical": 42,
+      "code": 40,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/integrations/BackendWorkbench.tsx",
+      "category": "production",
+      "physical": 296,
+      "code": 279,
+      "blank": 15,
+      "comment": 2
+    },
+    {
+      "path": "apps/web/src/integrations/backendClient.test.ts",
+      "category": "tests",
+      "physical": 51,
+      "code": 49,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/integrations/backendClient.ts",
+      "category": "production",
+      "physical": 411,
+      "code": 379,
+      "blank": 30,
+      "comment": 2
+    },
+    {
+      "path": "apps/web/src/integrations/remote.css",
+      "category": "production",
+      "physical": 47,
+      "code": 47,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/main.tsx",
+      "category": "production",
+      "physical": 6,
+      "code": 5,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/research/DatasetWorkbench.tsx",
+      "category": "production",
+      "physical": 132,
+      "code": 126,
+      "blank": 6,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/research/datasetTools.test.ts",
+      "category": "tests",
+      "physical": 41,
+      "code": 40,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/research/datasetTools.ts",
+      "category": "production",
+      "physical": 290,
+      "code": 277,
+      "blank": 13,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/research/modelAnalysis.test.ts",
+      "category": "tests",
+      "physical": 38,
+      "code": 37,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/research/modelAnalysis.ts",
+      "category": "production",
+      "physical": 260,
+      "code": 244,
+      "blank": 16,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/research/research.css",
+      "category": "production",
+      "physical": 43,
+      "code": 43,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/research/statistics.test.ts",
+      "category": "tests",
+      "physical": 45,
+      "code": 44,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/research/statistics.ts",
+      "category": "production",
+      "physical": 289,
+      "code": 269,
+      "blank": 20,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/styles/global.css",
+      "category": "production",
+      "physical": 958,
+      "code": 937,
+      "blank": 11,
+      "comment": 10
+    },
+    {
+      "path": "apps/web/src/types.ts",
+      "category": "production",
+      "physical": 55,
+      "code": 55,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/ArchitectureEditor.tsx",
+      "category": "production",
+      "physical": 468,
+      "code": 464,
+      "blank": 3,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/visualization/AttentionView.tsx",
+      "category": "production",
+      "physical": 281,
+      "code": 278,
+      "blank": 3,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/AttentionWorkbench.tsx",
+      "category": "production",
+      "physical": 314,
+      "code": 311,
+      "blank": 3,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/EmbeddingView.tsx",
+      "category": "production",
+      "physical": 318,
+      "code": 315,
+      "blank": 3,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/NetworkScene.tsx",
+      "category": "production",
+      "physical": 651,
+      "code": 641,
+      "blank": 9,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/visualization/RepresentationInspector.tsx",
+      "category": "production",
+      "physical": 243,
+      "code": 240,
+      "blank": 3,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/ResearchViews.tsx",
+      "category": "production",
+      "physical": 676,
+      "code": 669,
+      "blank": 7,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/SceneViewControls.tsx",
+      "category": "production",
+      "physical": 267,
+      "code": 265,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/TensorInspector.tsx",
+      "category": "production",
+      "physical": 472,
+      "code": 464,
+      "blank": 7,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/visualization/TensorSliceInspector.tsx",
+      "category": "production",
+      "physical": 315,
+      "code": 312,
+      "blank": 3,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/VisualizationWorkbench.tsx",
+      "category": "production",
+      "physical": 62,
+      "code": 60,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/__tests__/advanced.test.ts",
+      "category": "tests",
+      "physical": 347,
+      "code": 343,
+      "blank": 4,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/__tests__/numerics.test.ts",
+      "category": "tests",
+      "physical": 201,
+      "code": 196,
+      "blank": 5,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/__tests__/representations.test.ts",
+      "category": "tests",
+      "physical": 123,
+      "code": 121,
+      "blank": 2,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/architecture.ts",
+      "category": "production",
+      "physical": 549,
+      "code": 538,
+      "blank": 10,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/visualization/attention.ts",
+      "category": "production",
+      "physical": 272,
+      "code": 259,
+      "blank": 11,
+      "comment": 2
+    },
+    {
+      "path": "apps/web/src/visualization/exports.ts",
+      "category": "production",
+      "physical": 80,
+      "code": 75,
+      "blank": 5,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/index.ts",
+      "category": "production",
+      "physical": 49,
+      "code": 49,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/numerics.ts",
+      "category": "production",
+      "physical": 513,
+      "code": 492,
+      "blank": 17,
+      "comment": 4
+    },
+    {
+      "path": "apps/web/src/visualization/representations.ts",
+      "category": "production",
+      "physical": 274,
+      "code": 261,
+      "blank": 12,
+      "comment": 1
+    },
+    {
+      "path": "apps/web/src/visualization/tensors.ts",
+      "category": "production",
+      "physical": 341,
+      "code": 325,
+      "blank": 16,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/viewState.ts",
+      "category": "production",
+      "physical": 190,
+      "code": 184,
+      "blank": 6,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/src/visualization/visualization.css",
+      "category": "production",
+      "physical": 1114,
+      "code": 1114,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/vite.config.ts",
+      "category": "configuration_code",
+      "physical": 18,
+      "code": 17,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "apps/web/vitest.config.ts",
+      "category": "configuration_code",
+      "physical": 8,
+      "code": 8,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "demos/anomaly-detection/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/attention-sentiment/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/autoencoder/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/bandit/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/circles/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/custom-data/example.ts",
+      "category": "production",
+      "physical": 107,
+      "code": 102,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/denoising/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/forecasting/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/gaussian-clusters/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/gridworld/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/image-patterns/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/k-means/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/linear-regression/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/moons/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/next-token/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/parity/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/pca/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/sine-regression/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/spirals/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/super-mario/benchmark.py",
+      "category": "production",
+      "physical": 73,
+      "code": 58,
+      "blank": 6,
+      "comment": 9
+    },
+    {
+      "path": "demos/super-mario/bootstrap.sh",
+      "category": "production",
+      "physical": 42,
+      "code": 40,
+      "blank": 0,
+      "comment": 2
+    },
+    {
+      "path": "demos/super-mario/diagnose.py",
+      "category": "production",
+      "physical": 24,
+      "code": 18,
+      "blank": 4,
+      "comment": 2
+    },
+    {
+      "path": "demos/super-mario/doctor.py",
+      "category": "production",
+      "physical": 43,
+      "code": 33,
+      "blank": 5,
+      "comment": 5
+    },
+    {
+      "path": "demos/super-mario/evaluate.py",
+      "category": "production",
+      "physical": 46,
+      "code": 38,
+      "blank": 6,
+      "comment": 2
+    },
+    {
+      "path": "demos/super-mario/export.py",
+      "category": "production",
+      "physical": 51,
+      "code": 41,
+      "blank": 8,
+      "comment": 2
+    },
+    {
+      "path": "demos/super-mario/inspect_policy.py",
+      "category": "production",
+      "physical": 64,
+      "code": 53,
+      "blank": 5,
+      "comment": 6
+    },
+    {
+      "path": "demos/super-mario/intervene.py",
+      "category": "production",
+      "physical": 41,
+      "code": 29,
+      "blank": 4,
+      "comment": 8
+    },
+    {
+      "path": "demos/super-mario/mario_rl/__init__.py",
+      "category": "production",
+      "physical": 3,
+      "code": 1,
+      "blank": 1,
+      "comment": 1
+    },
+    {
+      "path": "demos/super-mario/mario_rl/checkpoint.py",
+      "category": "production",
+      "physical": 79,
+      "code": 50,
+      "blank": 12,
+      "comment": 17
+    },
+    {
+      "path": "demos/super-mario/mario_rl/config.py",
+      "category": "production",
+      "physical": 115,
+      "code": 101,
+      "blank": 7,
+      "comment": 7
+    },
+    {
+      "path": "demos/super-mario/mario_rl/diagnostics.py",
+      "category": "production",
+      "physical": 57,
+      "code": 47,
+      "blank": 5,
+      "comment": 5
+    },
+    {
+      "path": "demos/super-mario/mario_rl/dqn.py",
+      "category": "production",
+      "physical": 315,
+      "code": 263,
+      "blank": 27,
+      "comment": 25
+    },
+    {
+      "path": "demos/super-mario/mario_rl/environment.py",
+      "category": "production",
+      "physical": 197,
+      "code": 156,
+      "blank": 24,
+      "comment": 17
+    },
+    {
+      "path": "demos/super-mario/mario_rl/evaluation.py",
+      "category": "production",
+      "physical": 110,
+      "code": 85,
+      "blank": 6,
+      "comment": 19
+    },
+    {
+      "path": "demos/super-mario/mario_rl/interpretability.py",
+      "category": "production",
+      "physical": 132,
+      "code": 109,
+      "blank": 16,
+      "comment": 7
+    },
+    {
+      "path": "demos/super-mario/mario_rl/model.py",
+      "category": "production",
+      "physical": 121,
+      "code": 93,
+      "blank": 13,
+      "comment": 15
+    },
+    {
+      "path": "demos/super-mario/mario_rl/policies.py",
+      "category": "production",
+      "physical": 50,
+      "code": 39,
+      "blank": 7,
+      "comment": 4
+    },
+    {
+      "path": "demos/super-mario/mario_rl/ppo.py",
+      "category": "production",
+      "physical": 123,
+      "code": 100,
+      "blank": 13,
+      "comment": 10
+    },
+    {
+      "path": "demos/super-mario/mario_rl/replay.py",
+      "category": "production",
+      "physical": 233,
+      "code": 197,
+      "blank": 22,
+      "comment": 14
+    },
+    {
+      "path": "demos/super-mario/mario_rl/telemetry.py",
+      "category": "production",
+      "physical": 106,
+      "code": 73,
+      "blank": 12,
+      "comment": 21
+    },
+    {
+      "path": "demos/super-mario/mario_rl/training.py",
+      "category": "production",
+      "physical": 175,
+      "code": 152,
+      "blank": 9,
+      "comment": 14
+    },
+    {
+      "path": "demos/super-mario/mario_rl/vector.py",
+      "category": "production",
+      "physical": 171,
+      "code": 150,
+      "blank": 16,
+      "comment": 5
+    },
+    {
+      "path": "demos/super-mario/play.py",
+      "category": "production",
+      "physical": 30,
+      "code": 23,
+      "blank": 5,
+      "comment": 2
+    },
+    {
+      "path": "demos/super-mario/styles.css",
+      "category": "production",
+      "physical": 4,
+      "code": 4,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "demos/super-mario/tests/test_core.py",
+      "category": "tests",
+      "physical": 204,
+      "code": 171,
+      "blank": 31,
+      "comment": 2
+    },
+    {
+      "path": "demos/super-mario/tests/test_dqn.py",
+      "category": "tests",
+      "physical": 131,
+      "code": 105,
+      "blank": 23,
+      "comment": 3
+    },
+    {
+      "path": "demos/super-mario/tests/test_interpretability.py",
+      "category": "tests",
+      "physical": 64,
+      "code": 53,
+      "blank": 10,
+      "comment": 1
+    },
+    {
+      "path": "demos/super-mario/train.py",
+      "category": "production",
+      "physical": 43,
+      "code": 33,
+      "blank": 6,
+      "comment": 4
+    },
+    {
+      "path": "demos/super-mario/train_dqn.py",
+      "category": "production",
+      "physical": 44,
+      "code": 36,
+      "blank": 5,
+      "comment": 3
+    },
+    {
+      "path": "demos/super-mario/viewer.js",
+      "category": "production",
+      "physical": 301,
+      "code": 283,
+      "blank": 16,
+      "comment": 2
+    },
+    {
+      "path": "demos/surface-regression/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/tiny-cnn/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/tiny-digits/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/tiny-transformer/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "demos/xor/example.ts",
+      "category": "production",
+      "physical": 44,
+      "code": 39,
+      "blank": 3,
+      "comment": 2
+    },
+    {
+      "path": "deploy/validate.py",
+      "category": "production",
+      "physical": 142,
+      "code": 115,
+      "blank": 16,
+      "comment": 11
+    },
+    {
+      "path": "packages/protocol/backend.ts",
+      "category": "production",
+      "physical": 224,
+      "code": 200,
+      "blank": 23,
+      "comment": 1
+    },
+    {
+      "path": "playwright.config.ts",
+      "category": "configuration_code",
+      "physical": 26,
+      "code": 25,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "scripts/capture-screenshots.mjs",
+      "category": "tooling",
+      "physical": 66,
+      "code": 65,
+      "blank": 1,
+      "comment": 0
+    },
+    {
+      "path": "scripts/count-code.py",
+      "category": "tooling",
+      "physical": 134,
+      "code": 103,
+      "blank": 13,
+      "comment": 18
+    },
+    {
+      "path": "scripts/package-demos.mjs",
+      "category": "tooling",
+      "physical": 32,
+      "code": 29,
+      "blank": 3,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/__init__.py",
+      "category": "production",
+      "physical": 3,
+      "code": 1,
+      "blank": 1,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/__main__.py",
+      "category": "production",
+      "physical": 13,
+      "code": 8,
+      "blank": 5,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/analysis/cross_validation.py",
+      "category": "production",
+      "physical": 91,
+      "code": 76,
+      "blank": 8,
+      "comment": 7
+    },
+    {
+      "path": "services/api/src/neuralis/analysis/experiments.py",
+      "category": "production",
+      "physical": 252,
+      "code": 208,
+      "blank": 20,
+      "comment": 24
+    },
+    {
+      "path": "services/api/src/neuralis/analysis/representations.py",
+      "category": "production",
+      "physical": 109,
+      "code": 86,
+      "blank": 12,
+      "comment": 11
+    },
+    {
+      "path": "services/api/src/neuralis/analysis/sae.py",
+      "category": "production",
+      "physical": 63,
+      "code": 50,
+      "blank": 7,
+      "comment": 6
+    },
+    {
+      "path": "services/api/src/neuralis/analysis/statistics.py",
+      "category": "production",
+      "physical": 120,
+      "code": 94,
+      "blank": 13,
+      "comment": 13
+    },
+    {
+      "path": "services/api/src/neuralis/analysis/timeseries.py",
+      "category": "production",
+      "physical": 37,
+      "code": 30,
+      "blank": 4,
+      "comment": 3
+    },
+    {
+      "path": "services/api/src/neuralis/api/middleware.py",
+      "category": "production",
+      "physical": 36,
+      "code": 31,
+      "blank": 4,
+      "comment": 1
+    },
+    {
+      "path": "services/api/src/neuralis/api/research.py",
+      "category": "production",
+      "physical": 215,
+      "code": 180,
+      "blank": 32,
+      "comment": 3
+    },
+    {
+      "path": "services/api/src/neuralis/core/schemas.py",
+      "category": "production",
+      "physical": 160,
+      "code": 123,
+      "blank": 37,
+      "comment": 0
+    },
+    {
+      "path": "services/api/src/neuralis/datasets/imports.py",
+      "category": "production",
+      "physical": 165,
+      "code": 145,
+      "blank": 16,
+      "comment": 4
+    },
+    {
+      "path": "services/api/src/neuralis/datasets/synthetic.py",
+      "category": "production",
+      "physical": 117,
+      "code": 82,
+      "blank": 27,
+      "comment": 8
+    },
+    {
+      "path": "services/api/src/neuralis/lab/auth.py",
+      "category": "production",
+      "physical": 77,
+      "code": 63,
+      "blank": 11,
+      "comment": 3
+    },
+    {
+      "path": "services/api/src/neuralis/lab/coordinator.py",
+      "category": "production",
+      "physical": 180,
+      "code": 150,
+      "blank": 27,
+      "comment": 3
+    },
+    {
+      "path": "services/api/src/neuralis/main.py",
+      "category": "production",
+      "physical": 547,
+      "code": 429,
+      "blank": 72,
+      "comment": 46
+    },
+    {
+      "path": "services/api/src/neuralis/models/generation.py",
+      "category": "production",
+      "physical": 61,
+      "code": 51,
+      "blank": 7,
+      "comment": 3
+    },
+    {
+      "path": "services/api/src/neuralis/models/registry.py",
+      "category": "production",
+      "physical": 183,
+      "code": 143,
+      "blank": 27,
+      "comment": 13
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/capture.py",
+      "category": "production",
+      "physical": 111,
+      "code": 92,
+      "blank": 14,
+      "comment": 5
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/devices.py",
+      "category": "production",
+      "physical": 82,
+      "code": 64,
+      "blank": 13,
+      "comment": 5
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/profiler.py",
+      "category": "production",
+      "physical": 47,
+      "code": 34,
+      "blank": 9,
+      "comment": 4
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/supervisor.py",
+      "category": "production",
+      "physical": 336,
+      "code": 294,
+      "blank": 28,
+      "comment": 14
+    },
+    {
+      "path": "services/api/src/neuralis/runtime/sweeps.py",
+      "category": "production",
+      "physical": 147,
+      "code": 126,
+      "blank": 18,
+      "comment": 3
+    },
+    {
+      "path": "services/api/src/neuralis/sdk.py",
+      "category": "production",
+      "physical": 244,
+      "code": 198,
+      "blank": 29,
+      "comment": 17
+    },
+    {
+      "path": "services/api/src/neuralis/storage/checkpoints.py",
+      "category": "production",
+      "physical": 76,
+      "code": 64,
+      "blank": 7,
+      "comment": 5
+    },
+    {
+      "path": "services/api/src/neuralis/storage/repository.py",
+      "category": "production",
+      "physical": 196,
+      "code": 174,
+      "blank": 18,
+      "comment": 4
+    },
+    {
+      "path": "services/api/tests/conftest.py",
+      "category": "tests",
+      "physical": 11,
+      "code": 8,
+      "blank": 3,
+      "comment": 0
+    },
+    {
+      "path": "services/api/tests/test_api_lab.py",
+      "category": "tests",
+      "physical": 106,
+      "code": 87,
+      "blank": 16,
+      "comment": 3
+    },
+    {
+      "path": "services/api/tests/test_control.py",
+      "category": "tests",
+      "physical": 97,
+      "code": 79,
+      "blank": 18,
+      "comment": 0
+    },
+    {
+      "path": "services/api/tests/test_numerics.py",
+      "category": "tests",
+      "physical": 125,
+      "code": 102,
+      "blank": 23,
+      "comment": 0
+    },
+    {
+      "path": "services/worker/neuralis_worker/__init__.py",
+      "category": "production",
+      "physical": 2,
+      "code": 1,
+      "blank": 0,
+      "comment": 1
+    },
+    {
+      "path": "services/worker/neuralis_worker/__main__.py",
+      "category": "production",
+      "physical": 2,
+      "code": 2,
+      "blank": 0,
+      "comment": 0
+    },
+    {
+      "path": "services/worker/neuralis_worker/agent.py",
+      "category": "production",
+      "physical": 124,
+      "code": 115,
+      "blank": 9,
+      "comment": 0
+    },
+    {
+      "path": "services/worker/neuralis_worker/cli.py",
+      "category": "production",
+      "physical": 74,
+      "code": 64,
+      "blank": 8,
+      "comment": 2
+    },
+    {
+      "path": "services/worker/neuralis_worker/config.py",
+      "category": "production",
+      "physical": 64,
+      "code": 52,
+      "blank": 5,
+      "comment": 7
+    },
+    {
+      "path": "services/worker/neuralis_worker/ddp_task.py",
+      "category": "production",
+      "physical": 83,
+      "code": 72,
+      "blank": 6,
+      "comment": 5
+    },
+    {
+      "path": "services/worker/neuralis_worker/executor.py",
+      "category": "production",
+      "physical": 246,
+      "code": 203,
+      "blank": 21,
+      "comment": 22
+    },
+    {
+      "path": "services/worker/neuralis_worker/ledger.py",
+      "category": "production",
+      "physical": 143,
+      "code": 120,
+      "blank": 19,
+      "comment": 4
+    },
+    {
+      "path": "services/worker/neuralis_worker/protocol.py",
+      "category": "production",
+      "physical": 122,
+      "code": 98,
+      "blank": 17,
+      "comment": 7
+    },
+    {
+      "path": "services/worker/neuralis_worker/task_runner.py",
+      "category": "production",
+      "physical": 35,
+      "code": 27,
+      "blank": 8,
+      "comment": 0
+    },
+    {
+      "path": "services/worker/neuralis_worker/tasks.py",
+      "category": "production",
+      "physical": 106,
+      "code": 95,
+      "blank": 8,
+      "comment": 3
+    },
+    {
+      "path": "services/worker/tests/test_ledger.py",
+      "category": "tests",
+      "physical": 72,
+      "code": 63,
+      "blank": 9,
+      "comment": 0
+    },
+    {
+      "path": "services/worker/tests/test_worker.py",
+      "category": "tests",
+      "physical": 199,
+      "code": 173,
+      "blank": 25,
+      "comment": 1
+    }
+  ]
+}

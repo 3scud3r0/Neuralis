@@ -1,0 +1,14 @@
+{
+  "method": "integrated-gradients",
+  "action": 4,
+  "score": 0.6793636679649353,
+  "baselineScore": 0.004235798958688974,
+  "completenessResidual": 0.02029276406392455,
+  "checkpointTransitions": 2048,
+  "observationShape": [
+    4,
+    84,
+    84
+  ],
+  "note": "Attribution of the selected output score. Integrated gradients uses an all-black observation baseline; map colors are per-map normalized."
+}

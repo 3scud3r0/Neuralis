@@ -1,0 +1,16 @@
+{
+  "env_id": "SuperMarioBros-1-1-v0",
+  "stages": ["SuperMarioBros-1-1-v0", "SuperMarioBros-1-2-v0", "SuperMarioBros-1-3-v0", "SuperMarioBros-1-4-v0"],
+  "seed": 42,
+  "device": "auto",
+  "num_envs": 4,
+  "total_steps": 30000000,
+  "rollout_steps": 128,
+  "minibatch_size": 128,
+  "update_epochs": 4,
+  "curriculum_window": 20,
+  "curriculum_success_threshold": 0.8,
+  "evaluate_interval": 100,
+  "evaluation_episodes": 10,
+  "output_dir": "runs/curriculum"
+}

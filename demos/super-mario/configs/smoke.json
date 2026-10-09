@@ -1,0 +1,15 @@
+{
+  "env_id": "SuperMarioBros-1-1-v0",
+  "seed": 42,
+  "device": "cpu",
+  "num_envs": 2,
+  "vector_mode": "process",
+  "total_steps": 256,
+  "rollout_steps": 64,
+  "minibatch_size": 64,
+  "update_epochs": 2,
+  "max_episode_steps": 128,
+  "torch_threads": 2,
+  "checkpoint_interval": 1,
+  "output_dir": "runs/smoke"
+}

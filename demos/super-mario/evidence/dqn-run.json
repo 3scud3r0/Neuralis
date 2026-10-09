@@ -1,0 +1,481 @@
+{
+  "schema": "neuralis.mario.run/v1",
+  "run": {
+    "id": "dqn-smoke",
+    "algorithm": "Dueling Double-DQN + prioritized n-step replay",
+    "environment": "SuperMarioBros-1-1-v0",
+    "seed": 42,
+    "device": "cpu",
+    "totalTransitions": 512,
+    "startedAt": "2026-10-09T11:52:12.472889+00:00",
+    "status": "completed",
+    "rewardDescription": "Native gym-super-mario-bros reward; PPO reward multiplied by reward_scale",
+    "updatedAt": "2026-10-09T11:55:35.788398+00:00",
+    "finishedAt": "2026-10-09T11:55:37.704944+00:00",
+    "resumedAt": "2026-10-09T11:55:23.969661+00:00"
+  },
+  "config": {
+    "env_id": "SuperMarioBros-1-1-v0",
+    "stages": [],
+    "seed": 42,
+    "device": "cpu",
+    "num_envs": 2,
+    "vector_mode": "process",
+    "worker_timeout": 120.0,
+    "total_steps": 512,
+    "rollout_steps": 128,
+    "minibatch_size": 128,
+    "update_epochs": 4,
+    "learning_rate": 0.00025,
+    "anneal_learning_rate": true,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_coef": 0.2,
+    "value_coef": 0.5,
+    "entropy_coef": 0.01,
+    "max_grad_norm": 0.5,
+    "target_kl": 0.03,
+    "frame_skip": 4,
+    "frame_stack": 4,
+    "image_size": 84,
+    "action_set": "simple",
+    "reward_scale": 0.1,
+    "max_episode_steps": 64,
+    "noop_max": 10,
+    "torch_threads": 2,
+    "checkpoint_interval": 10,
+    "evaluate_interval": 0,
+    "evaluation_episodes": 5,
+    "curriculum_window": 20,
+    "curriculum_success_threshold": 0.8,
+    "output_dir": "runs/dqn-smoke"
+  },
+  "versions": {
+    "python": "3.11.16",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "torch": "2.7.1+cpu",
+    "numpy": "1.26.4",
+    "gym": "0.23.1",
+    "gym-super-mario-bros": "7.4.0",
+    "nes-py": "8.2.1",
+    "Pillow": "11.3.0"
+  },
+  "architecture": {
+    "layers": [
+      {
+        "name": "encoder.0",
+        "type": "Conv2d",
+        "inputShape": [
+          4,
+          84,
+          84
+        ],
+        "outputShape": [
+          32,
+          20,
+          20
+        ],
+        "parameters": 8224
+      },
+      {
+        "name": "encoder.2",
+        "type": "Conv2d",
+        "inputShape": [
+          32,
+          20,
+          20
+        ],
+        "outputShape": [
+          64,
+          9,
+          9
+        ],
+        "parameters": 32832
+      },
+      {
+        "name": "encoder.4",
+        "type": "Conv2d",
+        "inputShape": [
+          64,
+          9,
+          9
+        ],
+        "outputShape": [
+          64,
+          7,
+          7
+        ],
+        "parameters": 36928
+      },
+      {
+        "name": "trunk.0",
+        "type": "Linear",
+        "inputShape": [
+          3136
+        ],
+        "outputShape": [
+          512
+        ],
+        "parameters": 1606144
+      },
+      {
+        "name": "actor",
+        "type": "Linear",
+        "inputShape": [
+          512
+        ],
+        "outputShape": [
+          7
+        ],
+        "parameters": 3591
+      },
+      {
+        "name": "critic",
+        "type": "Linear",
+        "inputShape": [
+          512
+        ],
+        "outputShape": [
+          1
+        ],
+        "parameters": 513
+      }
+    ],
+    "parameters": 1688232
+  },
+  "metrics": [
+    {
+      "kind": "metrics",
+      "step": 64,
+      "time": "2026-10-09T11:52:13.151954+00:00",
+      "loss": 0.42047616839408875,
+      "meanAbsoluteTD": 1.234948754310608,
+      "meanQ": 1.8253276348114014,
+      "meanTarget": 0.7449172735214233,
+      "gradientNorm": 8.499086380004883,
+      "importanceWeight": 0.4540180563926697,
+      "updates": 5,
+      "epsilon": 0.769921875,
+      "beta": 0.4000384,
+      "replayEntries": 60,
+      "fps": 14.01482085305567,
+      "elapsedSeconds": 4.566594226999769,
+      "learningRate": 0.0001
+    },
+    {
+      "kind": "metrics",
+      "step": 128,
+      "time": "2026-10-09T11:52:14.069541+00:00",
+      "loss": 0.24339428544044495,
+      "meanAbsoluteTD": 1.0767303705215454,
+      "meanQ": 4.048882007598877,
+      "meanTarget": 3.3696460723876953,
+      "gradientNorm": 5.1992387771606445,
+      "importanceWeight": 0.3337406516075134,
+      "updates": 13,
+      "epsilon": 0.532421875,
+      "beta": 0.4000768,
+      "replayEntries": 124,
+      "fps": 23.339856625722696,
+      "elapsedSeconds": 5.484181074999924,
+      "learningRate": 0.0001
+    },
+    {
+      "kind": "metrics",
+      "step": 192,
+      "time": "2026-10-09T11:52:14.878488+00:00",
+      "loss": 0.42609718441963196,
+      "meanAbsoluteTD": 1.7999448776245117,
+      "meanQ": 7.538410186767578,
+      "meanTarget": 6.084436416625977,
+      "gradientNorm": 12.193517684936523,
+      "importanceWeight": 0.3083876073360443,
+      "updates": 21,
+      "epsilon": 0.294921875,
+      "beta": 0.4001152,
+      "replayEntries": 188,
+      "fps": 30.509469212439587,
+      "elapsedSeconds": 6.293128164999871,
+      "learningRate": 0.0001
+    },
+    {
+      "kind": "metrics",
+      "step": 256,
+      "time": "2026-10-09T11:52:15.919141+00:00",
+      "loss": 0.37394362688064575,
+      "meanAbsoluteTD": 2.4277853965759277,
+      "meanQ": 10.544832229614258,
+      "meanTarget": 9.236634254455566,
+      "gradientNorm": 6.441427707672119,
+      "importanceWeight": 0.21471917629241943,
+      "updates": 29,
+      "epsilon": 0.05742187500000007,
+      "beta": 0.4001536,
+      "replayEntries": 252,
+      "fps": 34.90696610461186,
+      "elapsedSeconds": 7.333779716999743,
+      "learningRate": 0.0001
+    },
+    {
+      "kind": "metrics",
+      "step": 320,
+      "time": "2026-10-09T11:55:26.344507+00:00",
+      "loss": 0.6501647233963013,
+      "meanAbsoluteTD": 4.307360649108887,
+      "meanQ": 16.624351501464844,
+      "meanTarget": 12.371363639831543,
+      "gradientNorm": 17.042072296142578,
+      "importanceWeight": 0.189339280128479,
+      "updates": 37,
+      "epsilon": 0.050000000000000044,
+      "beta": 0.40019200000000005,
+      "replayEntries": 312,
+      "fps": 5.1304694563777495,
+      "elapsedSeconds": 12.474491962999764,
+      "learningRate": 0.0001
+    },
+    {
+      "kind": "metrics",
+      "step": 384,
+      "time": "2026-10-09T11:55:28.911796+00:00",
+      "loss": 0.5793410539627075,
+      "meanAbsoluteTD": 3.950730323791504,
+      "meanQ": 21.09343147277832,
+      "meanTarget": 17.21371078491211,
+      "gradientNorm": 20.088153839111328,
+      "importanceWeight": 0.20080702006816864,
+      "updates": 45,
+      "epsilon": 0.050000000000000044,
+      "beta": 0.40023040000000004,
+      "replayEntries": 377,
+      "fps": 8.509627448054292,
+      "elapsedSeconds": 15.041786585999944,
+      "learningRate": 0.0001
+    },
+    {
+      "kind": "metrics",
+      "step": 448,
+      "time": "2026-10-09T11:55:31.092607+00:00",
+      "loss": 0.8607833981513977,
+      "meanAbsoluteTD": 6.409545421600342,
+      "meanQ": 24.35893440246582,
+      "meanTarget": 18.0792293548584,
+      "gradientNorm": 18.948984146118164,
+      "importanceWeight": 0.16404540836811066,
+      "updates": 53,
+      "epsilon": 0.050000000000000044,
+      "beta": 0.40026880000000004,
+      "replayEntries": 440,
+      "fps": 11.148180052342948,
+      "elapsedSeconds": 17.222542073999648,
+      "learningRate": 0.0001
+    },
+    {
+      "kind": "metrics",
+      "step": 512,
+      "time": "2026-10-09T11:55:35.788398+00:00",
+      "loss": 0.3618452548980713,
+      "meanAbsoluteTD": 2.8190293312072754,
+      "meanQ": 27.010059356689453,
+      "meanTarget": 24.5487003326416,
+      "gradientNorm": 9.354781150817871,
+      "importanceWeight": 0.19913963973522186,
+      "updates": 61,
+      "epsilon": 0.050000000000000044,
+      "beta": 0.40030720000000003,
+      "replayEntries": 505,
+      "fps": 11.679779374070222,
+      "elapsedSeconds": 21.91822223700001,
+      "learningRate": 0.0001
+    }
+  ],
+  "episodes": [
+    {
+      "kind": "episode",
+      "step": 56,
+      "time": "2026-10-09T11:52:13.023462+00:00",
+      "worker": 0,
+      "reward": 247.0,
+      "length": 28,
+      "frames": 110,
+      "flagGet": false,
+      "xPos": 309,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "kind": "episode",
+      "step": 86,
+      "time": "2026-10-09T11:52:13.449200+00:00",
+      "worker": 1,
+      "reward": 248.0,
+      "length": 43,
+      "frames": 169,
+      "flagGet": false,
+      "xPos": 314,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "kind": "episode",
+      "step": 176,
+      "time": "2026-10-09T11:52:14.656668+00:00",
+      "worker": 0,
+      "reward": 196.0,
+      "length": 60,
+      "frames": 240,
+      "flagGet": false,
+      "xPos": 266,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "kind": "episode",
+      "step": 214,
+      "time": "2026-10-09T11:52:15.114140+00:00",
+      "worker": 1,
+      "reward": 332.0,
+      "length": 64,
+      "frames": 256,
+      "flagGet": false,
+      "xPos": 385,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "kind": "episode",
+      "step": 316,
+      "time": "2026-10-09T11:55:26.161498+00:00",
+      "worker": 0,
+      "reward": 250.0,
+      "length": 30,
+      "frames": 120,
+      "flagGet": false,
+      "xPos": 314,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "kind": "episode",
+      "step": 322,
+      "time": "2026-10-09T11:55:26.478267+00:00",
+      "worker": 1,
+      "reward": 240.0,
+      "length": 33,
+      "frames": 129,
+      "flagGet": false,
+      "xPos": 304,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "kind": "episode",
+      "step": 376,
+      "time": "2026-10-09T11:55:28.699771+00:00",
+      "worker": 0,
+      "reward": 249.0,
+      "length": 30,
+      "frames": 120,
+      "flagGet": false,
+      "xPos": 313,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "kind": "episode",
+      "step": 382,
+      "time": "2026-10-09T11:55:28.814801+00:00",
+      "worker": 1,
+      "reward": 250.0,
+      "length": 30,
+      "frames": 120,
+      "flagGet": false,
+      "xPos": 314,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "kind": "episode",
+      "step": 504,
+      "time": "2026-10-09T11:55:35.111635+00:00",
+      "worker": 0,
+      "reward": 253.0,
+      "length": 64,
+      "frames": 256,
+      "flagGet": false,
+      "xPos": 306,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "kind": "episode",
+      "step": 510,
+      "time": "2026-10-09T11:55:35.477616+00:00",
+      "worker": 1,
+      "reward": 471.0,
+      "length": 64,
+      "frames": 256,
+      "flagGet": false,
+      "xPos": 523,
+      "stage": "SuperMarioBros-1-1-v0",
+      "terminated": false,
+      "truncated": true
+    }
+  ],
+  "events": [
+    {
+      "kind": "startup",
+      "step": 0,
+      "time": "2026-10-09T11:52:12.482260+00:00",
+      "algorithm": "double-dqn",
+      "resume": false,
+      "replayEntries": 0,
+      "replayIntegrity": "new buffer"
+    },
+    {
+      "kind": "startup",
+      "step": 256,
+      "time": "2026-10-09T11:55:23.981252+00:00",
+      "algorithm": "double-dqn",
+      "resume": true,
+      "replayEntries": 252,
+      "replayIntegrity": "SHA-256 verified"
+    }
+  ],
+  "evaluations": [],
+  "dqnConfig": {
+    "replay_capacity": 512,
+    "replay_memory_mb": 768,
+    "batch_size": 16,
+    "learning_starts": 32,
+    "train_every": 8,
+    "gradient_steps": 1,
+    "target_update_every": 64,
+    "target_tau": 1.0,
+    "learning_rate": 0.0001,
+    "n_steps": 3,
+    "priority_alpha": 0.6,
+    "priority_beta_start": 0.4,
+    "priority_beta_steps": 1000000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 256,
+    "max_gradient_norm": 10.0,
+    "checkpoint_every": 256,
+    "log_every": 64,
+    "save_replay": true
+  },
+  "provenance": {
+    "configSource": "Actual final runs/dqn-smoke/config-dqn.json",
+    "replayResume": "SHA-256 verified"
+  }
+}

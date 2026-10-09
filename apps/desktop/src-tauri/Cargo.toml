@@ -1,0 +1,34 @@
+[package]
+name = "neuralis-desktop"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+description = "Neuralis Studio native runtime and secure file bridge"
+license = "MIT"
+
+[lib]
+name = "neuralis_desktop"
+path = "src/lib.rs"
+
+[[bin]]
+name = "neuralis-desktop"
+path = "src/main.rs"
+required-features = ["desktop"]
+
+[features]
+default = []
+desktop = ["dep:tauri", "dep:tauri-build", "dep:tauri-plugin-dialog"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+url = "2"
+rand = "0.8"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"] }
+sha2 = "0.10"
+thiserror = "2"
+tauri = { version = "2", optional = true }
+tauri-plugin-dialog = { version = "2", optional = true }
+
+[build-dependencies]
+tauri-build = { version = "2", optional = true }

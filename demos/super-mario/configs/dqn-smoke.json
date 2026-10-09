@@ -1,0 +1,22 @@
+{
+  "environment": {
+    "env_id": "SuperMarioBros-1-1-v0",
+    "seed": 42,
+    "num_envs": 2,
+    "vector_mode": "process",
+    "total_steps": 256,
+    "max_episode_steps": 64,
+    "torch_threads": 2,
+    "output_dir": "runs/dqn-smoke"
+  },
+  "algorithm": {
+    "replay_capacity": 512,
+    "batch_size": 16,
+    "learning_starts": 32,
+    "train_every": 8,
+    "target_update_every": 64,
+    "epsilon_decay_steps": 256,
+    "checkpoint_every": 256,
+    "log_every": 64
+  }
+}

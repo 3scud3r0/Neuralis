@@ -1,0 +1,23 @@
+{
+  "schema": "neuralis.mario.diagnostics/v1",
+  "window": 100,
+  "episodes": 19,
+  "updates": 16,
+  "successes": 0,
+  "observedSuccessRate": 0.0,
+  "stageCounts": {
+    "SuperMarioBros-1-1-v0": 19
+  },
+  "findings": [
+    {
+      "code": "no-flags",
+      "severity": "warning",
+      "message": "No flag completion was recorded in the selected training window.",
+      "evidence": {
+        "episodes": 19,
+        "successes": 0
+      }
+    }
+  ],
+  "note": "Heuristic diagnostics based on exported measurements, not a policy quality guarantee."
+}

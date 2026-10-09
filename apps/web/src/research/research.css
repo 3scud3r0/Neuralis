@@ -1,0 +1,43 @@
+.research-panel { display: flex; flex-direction: column; gap: 18px; border: 1px solid #27374d; border-radius: 14px; background: linear-gradient(145deg, #101a2b, #09121e); padding: 24px; color: #e0e8f5; margin-bottom: 22px; }
+.research-heading { display: flex; gap: 13px; align-items: center; }
+.research-heading > svg { color: #5ddce8; flex-shrink: 0; }
+.research-heading h2 { font-size: 21px; margin: 0 0 6px; }
+.research-heading p { font-size: 13px; color: #91a3bb; margin: 0; line-height: 1.6; }
+.research-heading > .research-chip { margin-left: auto; white-space: nowrap; }
+.research-chip { border: 1px solid #2a465d; border-radius: 20px; color: #8ccbe0; background: #0b2331; font-size: 10px; padding: 5px 9px; display: inline-block; margin-left: 7px; }
+.research-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.research-panel button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 37px; border-radius: 7px; border: 1px solid #2c4663; background: #162b43; color: #c4e2f4; padding: 8px 12px; font: inherit; font-size: 12px; cursor: pointer; }
+.research-panel button:hover:not(:disabled) { border-color: #429abd; background: #1a3b55; }
+.research-panel button:disabled { opacity: .4; cursor: not-allowed; }
+.research-panel button:focus-visible { outline: 2px solid #6cd5f3; outline-offset: 3px; }
+.research-panel .research-primary { color: #081421; background: #64d5e1; border-color: #78e6ed; font-weight: 600; }
+.research-panel label { font-size: 12px; display: flex; flex-direction: column; color: #9cafc8; gap: 7px; }
+.research-panel input:not([type=checkbox]), .research-panel select, .research-panel textarea { border-radius: 7px; border: 1px solid #2a3d56; padding: 9px 11px; color: #d1e0f2; background: #0a1525; min-width: 0; font: inherit; font-size: 12px; box-sizing: border-box; }
+.research-panel textarea { width: 100%; resize: vertical; line-height: 1.65; font-family: ui-monospace, monospace; }
+.research-panel input:focus, .research-panel select:focus, .research-panel textarea:focus { outline: 1px solid #4cb9d6; }
+.research-grid { display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr); gap: 24px; align-items: start; }
+.research-controls { display: flex; flex-direction: column; gap: 13px; }
+.research-controls p, .research-result p { color: #8fa1b9; font-size: 12px; line-height: 1.6; }
+.research-details { border: 1px solid #26394f; border-radius: 9px; padding: 13px; }
+.research-details summary { cursor: pointer; font-size: 12px; color: #a1c2da; }
+.research-details[open] summary { margin-bottom: 13px; }
+.research-details .research-actions { margin-top: 12px; }
+.research-stat-row { display: flex; gap: 22px; flex-wrap: wrap; font-size: 12px; color: #8ea4bf; }
+.research-stat-row strong { color: #c6e1f5; }
+.research-table-wrap { overflow: auto; max-height: 370px; border: 1px solid #1e3046; border-radius: 8px; }
+.research-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; white-space: nowrap; }
+.research-table th { color: #8096b3; font-size: 11px; background: #0a1525; position: sticky; top: 0; font-weight: 500; }
+.research-table th, .research-table td { padding: 11px; border-bottom: 1px solid #1d2c41; }
+.research-table input[type=checkbox] { accent-color: #66d0df; }
+.research-result { border: 1px solid #2b4860; padding: 18px; border-radius: 10px; background: #0c1b2a; }
+.research-result h3 { margin: 0 0 7px; font-size: 15px; }
+.research-result pre { overflow: auto; max-height: 330px; white-space: pre-wrap; overflow-wrap: anywhere; font: 11px/1.6 ui-monospace, monospace; color: #94b7d4; }
+.research-error { color: #f4b3bd; border: 1px solid #6e354b; background: #311b2a; border-radius: 8px; padding: 12px; font-size: 13px; }
+.research-warning { color: #dec385 !important; border-left: 2px solid #b58b43; padding-left: 10px; font-size: 12px; line-height: 1.6; }
+.research-success { color: #6ce0b7; display: inline-flex; align-items: center; gap: 7px; font-size: 12px; }
+.research-plot { min-height: 200px; }
+.research-methods { display: flex; flex-wrap: wrap; gap: 7px; }
+.research-methods button.active { border-color: #58d5e2; background: #154151; color: #acecf2; }
+.research-progress { height: 5px; border-radius: 3px; background: #1a2e45; overflow: hidden; }
+.research-progress > div { background: #5dcfe0; height: 100%; transition: width .15s; }
+@media (max-width: 800px) { .research-grid { grid-template-columns: 1fr; } .research-heading { flex-wrap: wrap; } .research-heading > .research-chip { margin-left: 0; } .research-panel { padding: 17px; } }

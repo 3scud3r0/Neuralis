@@ -1,0 +1,23 @@
+{
+  "env_id": "SuperMarioBros-1-1-v0",
+  "seed": 42,
+  "device": "auto",
+  "num_envs": 4,
+  "vector_mode": "process",
+  "total_steps": 10000000,
+  "rollout_steps": 128,
+  "minibatch_size": 128,
+  "update_epochs": 4,
+  "learning_rate": 0.00025,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "frame_skip": 4,
+  "frame_stack": 4,
+  "image_size": 84,
+  "reward_scale": 0.1,
+  "max_episode_steps": 4500,
+  "checkpoint_interval": 20,
+  "evaluate_interval": 100,
+  "evaluation_episodes": 10,
+  "output_dir": "runs/level-1-1"
+}

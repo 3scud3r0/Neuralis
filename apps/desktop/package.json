@@ -1,0 +1,14 @@
+{
+  "name": "@neuralis/desktop",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev --features desktop",
+    "build": "tauri build --features desktop",
+    "test": "cargo test --manifest-path src-tauri/Cargo.toml --no-default-features",
+    "check": "cargo check --manifest-path src-tauri/Cargo.toml --features desktop",
+    "doctor": "python scripts/doctor.py"
+  },
+  "devDependencies": {"@tauri-apps/cli": "^2.0.0"}
+}

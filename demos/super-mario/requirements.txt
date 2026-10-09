@@ -1,0 +1,11 @@
+# Python 3.11: legacy Gym / nes_py are isolated from the Studio backend.
+numpy==1.26.4
+gym==0.23.1
+gym-super-mario-bros==7.4.0
+nes-py==8.2.1
+Pillow==11.3.0
+imageio==2.37.0
+imageio-ffmpeg==0.6.0
+pytest==8.4.2
+# CPU-only wheel; install using the documented PyTorch CPU index.
+torch==2.7.1+cpu

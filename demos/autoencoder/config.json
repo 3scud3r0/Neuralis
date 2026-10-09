@@ -1,0 +1,13 @@
+{
+  "demoId": "autoencoder",
+  "learningRate": 0.01,
+  "maxSteps": 1200,
+  "batchSize": 32,
+  "seed": 42,
+  "captureEvery": 10,
+  "optimizer": "adam",
+  "schedule": "constant",
+  "gradientClip": 5,
+  "weightDecay": 0,
+  "dropout": 0
+}

@@ -1,0 +1,22 @@
+{
+  "name": "neuralis-studio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @neuralis/web",
+    "build": "npm run build --workspace @neuralis/web && node scripts/package-demos.mjs",
+    "preview": "npm run preview --workspace @neuralis/web",
+    "typecheck": "npm run typecheck --workspace @neuralis/web",
+    "test": "npm run test --workspace @neuralis/web",
+    "test:e2e": "playwright test",
+    "screenshots": "node scripts/capture-screenshots.mjs",
+    "count": "python3 scripts/count-code.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}

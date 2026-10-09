@@ -1,0 +1,1 @@
+{"main":{"identifier":"main","description":"Local Neuralis window. Native filesystem access is granted only through explicit file selection.","local":true,"windows":["main"],"permissions":["core:default"]}}

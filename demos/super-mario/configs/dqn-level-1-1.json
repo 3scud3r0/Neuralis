@@ -1,0 +1,25 @@
+{
+  "environment": {
+    "env_id": "SuperMarioBros-1-1-v0",
+    "seed": 42,
+    "device": "auto",
+    "num_envs": 4,
+    "total_steps": 10000000,
+    "output_dir": "runs/dqn-level-1-1"
+  },
+  "algorithm": {
+    "replay_capacity": 10000,
+    "replay_memory_mb": 768,
+    "batch_size": 32,
+    "learning_starts": 10000,
+    "train_every": 4,
+    "target_update_every": 1000,
+    "n_steps": 3,
+    "priority_alpha": 0.6,
+    "priority_beta_start": 0.4,
+    "epsilon_decay_steps": 1000000,
+    "checkpoint_every": 10000,
+    "log_every": 1000,
+    "save_replay": true
+  }
+}

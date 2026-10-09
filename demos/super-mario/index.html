@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Mario Policy Lab · Neuralis Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="viewer.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../"><span class="brand-mark">N</span> Neuralis <span>Studio</span></a>
+    <span class="breadcrumb">Demo collection <span>/</span> Reinforcement learning</span>
+    <span class="mode"><i></i> LOCAL TRAINING · STATIC REPORT VIEWER</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">REAL ENVIRONMENT · REAL POLICY GRADIENTS</p>
+        <h1>Mario <span>Policy Lab</span></h1>
+        <p class="lead">Explore a convolutional agent learning inside the original NES emulator. Every curve below comes from an executed PPO update.</p>
+      </div>
+      <div class="hero-actions">
+        <label class="button primary" for="report-file">↑ Import training report</label>
+        <input id="report-file" type="file" accept="application/json,.json" hidden>
+        <a class="button" href="README.md">Training guide ↗</a>
+      </div>
+    </section>
+    <div id="notice" role="status" class="notice">Loading the captured smoke-training report…</div>
+    <section class="stats" aria-label="Experiment summary">
+      <article><span>Environment transitions</span><strong id="transitions">—</strong><small id="updates">—</small></article>
+      <article><span>Observed success</span><strong id="success">—</strong><small id="confidence">No evaluation loaded</small></article>
+      <article><span>Policy parameters</span><strong id="parameters">—</strong><small>Shared CNN + actor and critic</small></article>
+      <article><span>Maximum X position</span><strong id="max-x">—</strong><small id="evaluation-count">Measured emulator rollout</small></article>
+    </section>
+    <div class="workspace-grid">
+      <section class="panel chart-panel">
+        <div class="panel-heading"><div><span class="eyebrow">OPTIMIZATION TRACE</span><h2>Learning dynamics</h2></div><select id="metric" aria-label="Training metric"><option value="loss">Total PPO loss</option><option value="policyLoss">Policy loss</option><option value="valueLoss">Value loss</option><option value="entropy">Action entropy</option><option value="approxKL">Approximate KL</option><option value="clipFraction">Clip fraction</option><option value="fps">Transitions / second</option><option value="gradientNorm">Gradient norm before clipping</option></select></div>
+        <canvas id="chart" height="280" aria-label="Training metrics chart"></canvas>
+        <div class="chart-footer"><span id="chart-range">—</span><span>NES transitions →</span></div>
+        <input id="update-index" type="range" min="0" max="0" value="0" aria-label="Inspect PPO update">
+        <div class="update-details" id="update-details"></div>
+      </section>
+      <section class="panel architecture-panel">
+        <div class="panel-heading"><div><span class="eyebrow">ACTOR–CRITIC</span><h2>Inside the policy</h2></div><span class="tag">Inspectable</span></div>
+        <div id="architecture" class="architecture"></div>
+        <p class="muted">Four grayscale frames preserve motion. A shared encoder learns visual features; separate heads predict action logits and state value.</p>
+      </section>
+      <section class="panel frames-panel">
+        <div class="panel-heading"><div><span class="eyebrow">EMULATOR CAPTURE</span><h2>Actual evaluation frames</h2></div><span id="frame-badge" class="tag">PNG evidence</span></div>
+        <div class="frame-view"><img id="frame" alt="Actual frame captured from the Mario NES emulator"><div class="frame-label" id="frame-label">—</div></div>
+        <div class="frame-controls"><button id="previous-frame" class="button" aria-label="Previous captured frame">←</button><span id="frame-position">—</span><button id="next-frame" class="button" aria-label="Next captured frame">→</button></div>
+        <p class="muted">This is a recorded local evaluation. The emulator and PyTorch training run on your computer; GitHub Pages displays their exported results.</p>
+      </section>
+      <section class="panel evaluation-panel">
+        <div class="panel-heading"><div><span class="eyebrow">HELD-OUT ROLLOUTS</span><h2>Performance evidence</h2></div><span class="tag warning">No perfection claim</span></div>
+        <div class="table-scroll"><table><thead><tr><th>Episode</th><th>Native return</th><th>Max X</th><th>Actions</th><th>Outcome</th></tr></thead><tbody id="episodes"></tbody></table></div>
+        <p class="muted" id="evaluation-note">A bounded smoke test checks the full training pipeline. It does not produce a solved policy.</p>
+      </section>
+      <section class="panel activation-panel">
+        <div class="panel-heading"><div><span class="eyebrow">NEURAL INSTRUMENTATION</span><h2>Activation snapshot</h2></div><select id="layer" aria-label="Inspected network layer"></select></div>
+        <div id="activation-grid" class="activation-grid"></div><div id="activation-details" class="activation-details"></div>
+        <p class="muted">The first 128 flattened activations of a real evaluation observation. Colors use a symmetric scale within the selected layer.</p>
+      </section>
+      <section class="panel command-panel">
+        <div class="panel-heading"><div><span class="eyebrow">RUN ON YOUR HARDWARE</span><h2>From smoke test to research</h2></div></div>
+        <div class="command-tabs"><button data-command="smoke" class="selected">Smoke</button><button data-command="train">Train</button><button data-command="evaluate">Evaluate</button><button data-command="export">Export</button></div>
+        <pre id="command"></pre><button id="copy-command" class="button">Copy command</button>
+        <p class="muted">Python 3.11 · PyTorch · gym-super-mario-bros · nes_py. CPU-first defaults, multi-process rollouts and curriculum configuration included.</p>
+      </section>
+    </div>
+    <section class="method">
+      <h2>A traceable reinforcement-learning experiment</h2>
+      <div><article><b>01</b><h3>Observe</h3><p>Repeat each action for four emulator frames, max-pool recent frames, downsample to 84 × 84 and stack four observations.</p></article><article><b>02</b><h3>Estimate</h3><p>The CNN predicts a categorical action distribution and state value. Generalized advantage estimation handles deaths and timeouts separately.</p></article><article><b>03</b><h3>Optimize</h3><p>PPO constrains policy updates with clipping, regularizes exploration with entropy and limits gradient magnitude.</p></article><article><b>04</b><h3>Measure</h3><p>Evaluate held-out seeds. Export true native returns, flag completion, confidence intervals and numbered PNG evidence.</p></article></div>
+    </section>
+    <footer>Neuralis Studio · Mario Policy Lab <span>Mario assets belong to their respective rights holders. No ROM is distributed in this repository.</span></footer>
+  </main>
+</body>
+</html>
